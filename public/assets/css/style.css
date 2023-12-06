@@ -498,3 +498,60 @@ body{
 
 /* --------------------------------------- Home ----------------------------------------- */
 
+
+
+/* --------------------------------------- Workout ----------------------------------------- */
+
+.workout-img {
+    position: relative;
+    height: 500px;
+}
+
+.workout-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, white, transparent);
+    z-index: 1;
+}
+
+.workout-name {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--blue-primary);
+    z-index: 2;
+}
+
+.workout-name h1 {
+    margin: 0;
+    font-size: 70px;
+}
+
+/* --------------------------------------- Workout ----------------------------------------- */
+
+/* --------------------------------------- single video ----------------------------------------- */
+
+.video-js{
+    width: 1200px;
+}
+
+.video-container{
+    border-radius: 20px;
+    border: var(--blue-secondary) 5px solid;
+    z-index: 2;
+    overflow: hidden;
+    height: 680px;
+}
+
+.video-js source{
+    width: 100%;
+}
+
+
+/* --------------------------------------- single video ----------------------------------------- */

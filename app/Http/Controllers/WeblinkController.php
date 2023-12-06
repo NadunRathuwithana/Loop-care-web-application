@@ -27,6 +27,15 @@ class WeblinkController extends Controller
         }
     }
 
+    public function SingleVideo()
+    {
+        try {
+            return view('user/singleVideo');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
     public function Appointment()
     {
         try {

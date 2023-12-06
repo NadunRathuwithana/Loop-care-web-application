@@ -35,7 +35,7 @@
         <!-- Right Side Profile Icon -->
         <div class="profile-icon">
             <a href="#">
-                <img src="profile-icon.png" alt="Profile Icon">
+                <img src="assets/img/user.png" alt="Profile Icon">
             </a>
         </div>
     </div>

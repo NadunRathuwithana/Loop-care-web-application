@@ -12,13 +12,10 @@
                     <img class="d-block w-100 hero-img" src="assets/img/banners/banner-1.jpg">
                 </div>
                 <div class="swiper-slide swiper-hero-img">
-                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-1.jpg">
+                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-2.jpg">
                 </div>
                 <div class="swiper-slide swiper-hero-img">
-                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-1.jpg">
-                </div>
-                <div class="swiper-slide swiper-hero-img">
-                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-1.jpg">
+                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-3.jpg">
                 </div>
             </div>
             <div class="swiper-pagination"></div>
