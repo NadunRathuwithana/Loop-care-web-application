@@ -18,10 +18,19 @@ class WeblinkController extends Controller
         }
     }
 
-    public function Workout()
+    public function Workouts()
     {
         try {
-            return view('user/workout');
+            return view('user/workouts');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function SingleWorkout()
+    {
+        try {
+            return view('user/single-workout');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }

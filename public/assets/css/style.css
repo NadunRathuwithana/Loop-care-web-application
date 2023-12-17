@@ -199,7 +199,7 @@ body{
     overflow: hidden;
   }
 
-  .sliderSwiper .swiper-slide .image-container::before {
+  /* .sliderSwiper .swiper-slide .image-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -208,7 +208,7 @@ body{
     height: 100%;
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
     z-index: 1;
-}
+} */
 
   .sliderSwiper .swiper-slide .card:hover .card-img-top {
     transform: scale(1.05);
@@ -446,6 +446,18 @@ body{
     transition: transform 0.3s ease;
   }
 
+  /* workout card swiper */
+  .workoutCard .swiper-slide .image-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
+    z-index: 1;
+} 
+
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
     .trainerCardSwiper .swiper-slide .text-overlay h4{
@@ -531,6 +543,11 @@ body{
 .workout-name h1 {
     margin: 0;
     font-size: 70px;
+}
+
+
+.videoCard img::before{
+    background: transparent !important;
 }
 
 /* --------------------------------------- Workout ----------------------------------------- */

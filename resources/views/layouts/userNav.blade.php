@@ -17,10 +17,13 @@
             <a class="nav-link" href="{{ url('/') }}">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('workout') }}">Workouts</a>
+            <a class="nav-link" href="{{ url('workouts') }}">Workouts</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{ url('appointment') }}">Appointments</a>
+            <a class="nav-link" href="{{ url('appointment') }}">Meet Doctor</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{ url('appointment') }}">Meet Trainer</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="{{ url('meals') }}">Meals</a>

@@ -17,7 +17,8 @@ use App\Http\Controllers\WeblinkController;
 */
 
 Route::get('/', [WeblinkController::class, 'Home']);
-Route::get('/workout', [WeblinkController::class, 'Workout']);
+Route::get('/workouts', [WeblinkController::class, 'Workouts']);
+Route::get('/single-workout', [WeblinkController::class, 'SingleWorkout']);
 Route::get('/singleVideo', [WeblinkController::class, 'SingleVideo']);
 Route::get('/appointment', [WeblinkController::class, 'Appointment']);
 Route::get('/meals', [WeblinkController::class, 'Meals']);
