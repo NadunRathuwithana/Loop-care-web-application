@@ -40,7 +40,7 @@
                                         {{csrf_field()}}
 
                                         <div class="form-group pt-3 mb-5">
-                                            <h1>Log In to Loop Care</h1>
+                                            <h3>Log In to Loop Care</h3>
                                         </div>
 
                                         <div class="form-group pt-5">

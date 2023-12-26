@@ -12,7 +12,10 @@
 {{--  Swiper JS  --}}
 <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css') }}" />
 
+{{--  <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/bs-stepper@1.7.0/dist/css/bs-stepper.min.css') }}">  --}}
+
 {{-- custom css --}}
 <link href="{{ url('assets/css/style.css') }}" rel="stylesheet">
 <link href="{{ url('assets/css/nav.css') }}" rel="stylesheet">
 <link href="{{ url('assets/css/player.css') }}" rel="stylesheet">
+<link href="{{ url('assets/css/wizard.css') }}" rel="stylesheet">
