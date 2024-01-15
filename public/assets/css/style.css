@@ -1,205 +1,177 @@
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
 :root {
-    --blue-primary: #001C33;
+    --blue-primary: #001c33;
     --blue-secondary: #004371;
-    --blue-highlight: #74EADA;
-    --blue-light: #F2F5F8;
-    --gray: #D1D1D1;
+    --blue-highlight: #74eada;
+    --blue-light: #f2f5f8;
+    --gray: #d1d1d1;
 }
 
-body{
-    font-family: 'SF Pro Display', sans-serif;
+body {
+    font-family: "SF Pro Display", sans-serif;
 }
 
-.btn-main{
-    border-radius: 50px;
-    background-color: #6247aa;
-    border: #4e319e 1px solid;
+.btn-main {
+    border-radius: 50px !important;
+    background-color: var(--blue-primary) !important;
+    border: var(--blue-primary)1px solid !important;
+    color: #fff !important;
+    min-height: 3rem;
+}
+
+.btn-main:hover {
+    background-color: #002842 !important;
+    border: var(--blue-primary)1px solid;
     color: #fff;
 }
 
-.btn-main:hover{
-    background-color: #4e319e;
-    border: #4e319e 1px solid;
-    color: #fff;
+.btn-main:focus,
+.btn-main:active {
+    outline: none;
+    border: none;
+    box-shadow: none;
 }
 
-.input{
+.text-main{
+    color: var(--blue-secondary);
+}
+
+.input {
     border-radius: 50px;
+}
+
+.input-group-text{
+    border-radius: 50px 0 0 50px !important;
+}
+
+.form-select{
+    border-radius: 0 50px 50px 0 !important;
 }
 
 
 /* ---------------------------------------login----------------------------------------- */
 
-.reglink{
+.reglink {
     color: #6247aa;
     text-decoration: none;
     font-weight: 500;
 }
 
-.reglink:hover{
+.reglink:hover {
     color: #4e319e;
 }
 
 /* ---------------------------------------login----------------------------------------- */
 
-/* ---------------------------------------Get Started----------------------------------------- */
-
-.background-div {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-}
-
-.background-div::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Adjust the alpha value to control the darkness */
-    z-index: -1; /* Place the overlay behind the content */
-}
-
-.background-div::after {
-    content: "";
-    background-image: url("../img/login-reg/reg-bg.jpg");
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -2; /* Place the image behind the overlay */
-}
-
-.logo{
-    width: 100px;
-    height: auto;
-    position: absolute;
-    top: 0;
-    margin-top: 20px;
-}
-
-@media (max-width: 480px) {
-    .text-main{
-        text-align: center;
-    }
-}
-
-/* ---------------------------------------Get Started----------------------------------------- */
 
 /* --------------------------------------- Home ----------------------------------------- */
-.hero-slider{
-  padding-top: 80px;
+.hero-slider {
+    padding-top: 80px;
 }
-.sub-title{
-	color: var(--blue-secondary);
-	font-weight: 600;
+.sub-title {
+    color: var(--blue-secondary);
+    font-weight: 600;
 }
 
 .swiper-button-next,
-.swiper-button-prev{
-  background-color: var(--blue-highlight);
-  padding: 20px;
-  border-radius: 50%;
-  height: 10px;
-  width: 10px;
+.swiper-button-prev {
+    background-color: var(--blue-highlight);
+    padding: 20px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
 }
-
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: var(--blue-primary);
-  font-size: 15px;
-  font-weight: 800;
+    color: var(--blue-primary);
+    font-size: 15px;
+    font-weight: 800;
 }
 
 /* hero slider */
-.hero-img{
-	height: 100%;
+.hero-img {
+    height: 100%;
     width: auto;
-	object-fit: cover;
+    object-fit: cover;
 }
 
-.heroSwiper{
-	border-radius: 10px !important;
+.heroSwiper {
+    border-radius: 10px !important;
     height: 700px;
 }
 
-.swiper-hero-img{
-	border-radius: 0;
+.swiper-hero-img {
+    border-radius: 0;
 }
 
 @media (max-width: 480px) {
-    .heroSwiper{
+    .heroSwiper {
         height: 200px;
     }
 
     .swiper-button-next,
-    .swiper-button-prev{
+    .swiper-button-prev {
         display: none;
     }
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-    .heroSwiper{
+    .heroSwiper {
         height: 250px;
     }
 
     .swiper-button-next,
-    .swiper-button-prev{
+    .swiper-button-prev {
         display: none;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
-    .heroSwiper{
+@media (min-width: 768px) and (max-width: 1024px) {
+    .heroSwiper {
         height: 400px;
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1280px){
-    .heroSwiper{
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .heroSwiper {
         height: 500px;
     }
 }
 
 /* slider */
 .sliderSwiper {
-	width: 100%;
-	height: 100%;
-	padding: 10px 0;
-  }
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
 
- .sliderSwiper .swiper-slide {
-	text-align: left;
-	font-size: 18px;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
+.sliderSwiper .swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .sliderSwiper .swiper-slide .card {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.sliderSwiper .swiper-slide .card {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     overflow: hidden;
-	transition: transform 0.3s ease;
-  }
+    transition: transform 0.3s ease;
+}
 
-  .sliderSwiper .swiper-slide .image-container {
+.sliderSwiper .swiper-slide .image-container {
     position: relative;
     overflow: hidden;
-  }
+}
 
-  /* .sliderSwiper .swiper-slide .image-container::before {
+/* .sliderSwiper .swiper-slide .image-container::before {
     content: "";
     position: absolute;
     top: 0;
@@ -210,84 +182,86 @@ body{
     z-index: 1;
 } */
 
-  .sliderSwiper .swiper-slide .card:hover .card-img-top {
+.sliderSwiper .swiper-slide .card:hover .card-img-top {
     transform: scale(1.05);
-  }
+}
 
-  .sliderSwiper .swiper-slide .card-body small{
-	font-weight: 100;
-  }
+.sliderSwiper .swiper-slide .card-body small {
+    font-weight: 100;
+}
 
-  .sliderSwiper .swiper-slide .card-body  h4{
+.sliderSwiper .swiper-slide .card-body h4 {
     color: var(--blue-primary);
     font-weight: 700;
     line-height: 0.5;
     padding: 0;
     margin: 8px 0;
-  }
+}
 
-  .sliderSwiper .swiper-slide a {
-	text-decoration: none;
-  }
+.sliderSwiper .swiper-slide a {
+    text-decoration: none;
+}
 
- .sliderSwiper .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.sliderSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease;
-  }
-
+}
 
 /* boxCardSwiper */
 .boxCardSwiper {
-	width: 100%;
-	height: 100%;
-	padding: 10px 0;
-  }
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
 
- .boxCardSwiper .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
+.boxCardSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .boxCardSwiper .swiper-slide .image-container {
+.boxCardSwiper .swiper-slide .image-container {
     position: relative;
-  }
+}
 
-  .boxCardSwiper .swiper-slide .card {
+.boxCardSwiper .swiper-slide .card {
     position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     overflow: hidden;
-	transition: transform 0.3s ease;
-  }
+    transition: transform 0.3s ease;
+}
 
-  .boxCardSwiper .swiper-slide .card:hover .card-img-top {
+.boxCardSwiper .swiper-slide .card:hover .card-img-top {
     transform: scale(1.05);
-  }
+}
 
-  .boxCardSwiper .swiper-slide .gradient-overlay {
+.boxCardSwiper .swiper-slide .gradient-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     border-radius: 10px;
-    background: linear-gradient(to bottom, rgba(195, 20, 50, 0) 50%, rgba(36, 11, 54, 1) 95%);
+    background: linear-gradient(
+        to bottom,
+        rgba(195, 20, 50, 0) 50%,
+        rgba(36, 11, 54, 1) 95%
+    );
 }
 
-
-  .boxCardSwiper .swiper-slide .text-overlay {
-	position: absolute;
+.boxCardSwiper .swiper-slide .text-overlay {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
@@ -295,116 +269,115 @@ body{
     padding: 10px 20px;
     text-align: left;
     z-index: 2;
-  }
+}
 
-  .boxCardSwiper .swiper-slide .text-overlay h2{
+.boxCardSwiper .swiper-slide .text-overlay h2 {
     font-weight: 700;
     line-height: 0.9;
     padding: 0;
     margin: 8px 0;
-  }
+}
 
-  .boxCardSwiper .swiper-slide .text-overlay small{
+.boxCardSwiper .swiper-slide .text-overlay small {
     font-weight: 100;
     background-color: rgb(0, 0, 0, 0.5);
     padding: 3px 8px;
     border-radius: 50px;
-  }
+}
 
-  .boxCardSwiper .swiper-slide a {
-	text-decoration: none;
+.boxCardSwiper .swiper-slide a {
+    text-decoration: none;
     line-height: 1;
-  }
+}
 
- .boxCardSwiper .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.boxCardSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease;
-  }
+}
 
 /* categoryCardSwiper */
 .categoryCardSwiper {
-	width: 100%;
-	height: 100%;
-	padding: 10px 0;
-  }
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
 
- .categoryCardSwiper .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
+.categoryCardSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .categoryCardSwiper .swiper-slide .image-container {
+.categoryCardSwiper .swiper-slide .image-container {
     position: relative;
-  }
+}
 
-  .categoryCardSwiper .swiper-slide .card {
+.categoryCardSwiper .swiper-slide .card {
     position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     overflow: hidden;
-	transition: transform 0.3s ease;
-  }
-
-  .categoryCardSwiper .swiper-slide .card:hover .card-img-top {
-    transform: scale(1.05);
-  }
-
- .categoryCardSwiper .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	max-height: 200px;
-	object-fit: cover;
-	border-radius: 10px;
     transition: transform 0.3s ease;
-  }
+}
 
-
-  /* trainerCardSwiper */
-.trainerCardSwiper {
-	width: 100%;
-	height: 100%;
-	padding: 10px 0;
-  }
-
- .trainerCardSwiper .swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
-
-  .trainerCardSwiper .swiper-slide .image-container {
-    position: relative;
-  }
-
-  .trainerCardSwiper .swiper-slide .card {
-    position: relative;
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
-    overflow: hidden;
-	transition: transform 0.3s ease;
-  }
-
-  .trainerCardSwiper .swiper-slide .card:hover .card-img-top {
+.categoryCardSwiper .swiper-slide .card:hover .card-img-top {
     transform: scale(1.05);
-  }
+}
+
+.categoryCardSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* trainerCardSwiper */
+.trainerCardSwiper {
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+}
+
+.trainerCardSwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainerCardSwiper .swiper-slide .image-container {
+    position: relative;
+}
+
+.trainerCardSwiper .swiper-slide .card {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.trainerCardSwiper .swiper-slide .card:hover .card-img-top {
+    transform: scale(1.05);
+}
 
 .trainerCardSwiper .swiper-slide .text-overlay {
     position: absolute;
@@ -420,97 +393,92 @@ body{
     align-items: flex-start;
 }
 
-
-  .trainerCardSwiper .swiper-slide .text-overlay h4{
+.trainerCardSwiper .swiper-slide .text-overlay h4 {
     font-weight: 700;
     line-height: 0.9;
     padding: 0;
     margin: 8px 0;
-  }
+}
 
-  .trainerCardSwiper .swiper-slide .text-overlay small{
+.trainerCardSwiper .swiper-slide .text-overlay small {
     font-weight: 100;
-  }
+}
 
-  .trainerCardSwiper .swiper-slide a {
-	text-decoration: none;
+.trainerCardSwiper .swiper-slide a {
+    text-decoration: none;
     line-height: 1;
-  }
+}
 
- .trainerCardSwiper .swiper-slide img {
-	display: block;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	border-radius: 10px;
+.trainerCardSwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
     transition: transform 0.3s ease;
-  }
+}
 
-  /* workout card swiper */
-  .workoutCard .swiper-slide .image-container::before {
+/* workout card swiper */
+.workoutCard .swiper-slide .image-container::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
     z-index: 1;
 }
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-    .trainerCardSwiper .swiper-slide .text-overlay h4{
+    .trainerCardSwiper .swiper-slide .text-overlay h4 {
         padding: 0;
         margin: 3px 0;
-      }
+    }
 
-      .trainerCardSwiper .swiper-slide .text-overlay small{
+    .trainerCardSwiper .swiper-slide .text-overlay small {
         font-size: small;
-      }
+    }
 
-      .boxCardSwiper .swiper-slide .text-overlay h2{
+    .boxCardSwiper .swiper-slide .text-overlay h2 {
         font-weight: 700;
         line-height: 0.9;
         padding: 0;
         margin: 4px 0;
-      }
+    }
 
-      .boxCardSwiper .swiper-slide .text-overlay small{
+    .boxCardSwiper .swiper-slide .text-overlay small {
         font-size: small;
         padding: 3px 8px;
-      }
-      .sliderSwiper .swiper-slide .card-body small{
+    }
+    .sliderSwiper .swiper-slide .card-body small {
         font-size: small;
-      }
+    }
 
-      .sliderSwiper .swiper-slide .card-body  h4{
+    .sliderSwiper .swiper-slide .card-body h4 {
         padding: 0;
         margin: 0px 0;
-      }
-
+    }
 }
 
 /* Media Query for low resolution  Tablets, Ipads */
 @media (min-width: 481px) and (max-width: 767px) {
-
 }
 
 /* Media Query for Tablets Ipads portrait mode */
-@media (min-width: 768px) and (max-width: 1024px){
-
+@media (min-width: 768px) and (max-width: 1024px) {
 }
 
 /* Media Query for Laptops and Desktops */
-@media (min-width: 1025px) and (max-width: 1280px){
-
+@media (min-width: 1025px) and (max-width: 1280px) {
 }
 
-
-
 /* --------------------------------------- Home ----------------------------------------- */
-
-
 
 /* --------------------------------------- Workout ----------------------------------------- */
 
@@ -520,7 +488,7 @@ body{
 }
 
 .workout-img::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     right: 0;
@@ -545,8 +513,7 @@ body{
     font-size: 70px;
 }
 
-
-.videoCard img::before{
+.videoCard img::before {
     background: transparent !important;
 }
 
@@ -554,11 +521,11 @@ body{
 
 /* --------------------------------------- single video ----------------------------------------- */
 
-.video-js{
+.video-js {
     width: 1200px;
 }
 
-.video-container{
+.video-container {
     border-radius: 20px;
     border: var(--blue-secondary) 5px solid;
     z-index: 2;
@@ -566,9 +533,8 @@ body{
     height: 680px;
 }
 
-.video-js source{
+.video-js source {
     width: 100%;
 }
-
 
 /* --------------------------------------- single video ----------------------------------------- */

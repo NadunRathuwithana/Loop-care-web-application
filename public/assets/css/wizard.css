@@ -1,529 +1,266 @@
-:focus {
-    outline: none;
+/* -------------------------------------------Wizard-------------------------------------------- */
+#regForm {
+    background-color: #ffffff;
+    margin: 0px auto;
+    padding: 40px;
+    border-radius: 10px;
 }
 
-textarea {
-    resize: none;
+h1 {
+    text-align: center;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-ul {
-    margin: 0;
+input {
+    padding: 10px;
+    width: 100%;
+    font-size: 20px;
+    border: 2px solid #b5bfd9 !important;
+    min-height: 3rem;
 }
 
-ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
+input:active {
+    border-color: var(--blue-secondary) !important;
+    color: var(--blue-secondary) !important;
+    box-shadow: none !important;
 }
 
-a {
-    text-decoration: none;
+input:focus {
+    border-color: var(--blue-secondary) !important;
+    color: var(--blue-secondary) !important;
+    box-shadow: none !important;
 }
 
-textarea {
-    resize: none;
+input.invalid {
+    background-color: #ffdddd;
 }
 
-select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    cursor: pointer;
+.input-group-text{
+    padding: 0 20px;
+    background-color: transparent !important;
     border: none;
+    color: var(--blue-secondary);
 }
-select option[value=""][disabled] {
+
+.select-label {
+    width: 100%;
+    min-height: 3rem;
+    border: none !important;;
+    box-shadow: none !important;
+}
+
+.select-label:active {
+    border: none !important;;
+    box-shadow: none !important;
+}
+
+.select-label:focus {
+    border: none !important;;
+    box-shadow: none !important;
+}
+
+.select-label .invalid {
+    background-color: #ffdddd;
+}
+
+
+.select-label option{
+    text-align: start !important;
+}
+
+.select-label option:hover{
+    background-color: #cde0ec !important;
+}
+
+.selectWizard {
+    width: 100%;
+    border: 2px solid #b5bfd9 ;
+    min-height: 3rem;
+    border-radius: 50px;
+}
+
+.selectWizard:hover {
+    border: 2px solid var(--blue-secondary) !important;
+}
+
+/* Add your existing styles here */
+
+
+.tab {
     display: none;
 }
 
-img {
-    max-width: 100%;
-    vertical-align: middle;
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
 }
 
-.wrapper {
-    max-width: 1400px;
-    height: 100vh;
-    margin: auto;
-    display: flex;
-    align-items: center;
-}
-.wrapper .image-holder {
-    width: 51%;
-}
-.wrapper form {
-    width: 49%;
+.step.active {
+    opacity: 1;
 }
 
-.wizard > .steps .current-info,
-.wizard > .steps .number {
-    display: none;
+.step.finish {
+    background-color: #4caf50;
 }
 
-#wizard {
-    min-height: 834px;
-    background: #fff;
-    margin-right: 60px;
-}
-
-.steps {
+.all-steps {
+    text-align: center;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
-.steps ul {
-    display: flex;
-    position: relative;
-}
-.steps ul li {
-    width: 20.16%;
-    margin-right: 10px;
-}
-.steps ul li a {
-    width: 100%;
-    height: 7px;
-    background: #e6e6e6;
-    border-radius: 3.5px;
-}
-.steps ul li.first a,
-.steps ul li.checked a {
-    background: #f3d4b7;
-    transition: all 0.5s ease;
-}
-.steps ul:before {
-    content: "Billing Details";
-    font-size: 22px;
-    color: #333;
-    top: -38px;
-    position: absolute;
-}
-.steps ul.step-2:before {
-    content: "Additional Information";
-}
-.steps ul.step-3:before {
-    content: "Your Order";
-}
-.steps ul.step-4:before {
-    content: "Billing Method";
+
+.thanks-message {
+    display: none;
 }
 
-.form-row {
-    margin-bottom: 24px;
-}
-.form-row label {
-    margin-bottom: 8px;
+.container {
     display: block;
-}
-.form-row.form-group {
-    display: flex;
-}
-.form-row.form-group .form-holder {
-    width: 50%;
-    margin-right: 21px;
-}
-.form-row.form-group .form-holder:last-child {
-    margin-right: 0;
-}
-
-.form-holder {
     position: relative;
-}
-.form-holder i {
-    position: absolute;
-    top: 11px;
-    right: 19px;
-    font-size: 17px;
-    color: #999;
-}
-
-.form-control {
-    height: 42px;
-    background: none;
-    width: 100%;
-    padding: 0 18px;
-}
-.form-control:focus {
-    border-color: #f3d4b7;
-}
-.form-control::-webkit-input-placeholder {
-    color: #999;
-    font-size: 13px;
-}
-.form-control::-moz-placeholder {
-    color: #999;
-    font-size: 13px;
-}
-.form-control:-ms-input-placeholder {
-    color: #999;
-    font-size: 13px;
-}
-.form-control:-moz-placeholder {
-    color: #999;
-    font-size: 13px;
-}
-
-textarea.form-control {
-    padding-top: 11px;
-    padding-bottom: 11px;
-}
-
-.option {
-    color: #999;
-}
-
-.actions ul {
-    display: flex;
-    margin-top: 30px;
-    justify-content: space-between;
-}
-.actions ul.step-last {
-    justify-content: flex-end;
-}
-.actions ul.step-last li:first-child {
-    display: none;
-}
-.actions li a {
-    text-align: center;
-    padding: 0;
-    border: none;
-    display: inline-flex;
-    height: 51px;
-    width: 135px;
-    align-items: center;
-    background: #f3d4b7;
+    padding-left: 35px;
+    margin-bottom: 12px;
     cursor: pointer;
-    position: relative;
-    color: #333;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    font-weight: 400;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.actions li a:hover {
-    background: #d9bda3;
-}
-.actions li a:hover:before {
-    -webkit-animation-name: hvr-icon-wobble-horizontal;
-    animation-name: hvr-icon-wobble-horizontal;
-    -webkit-animation-duration: 1s;
-    animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: 1;
-    animation-iteration-count: 1;
-}
-.actions li[aria-disabled="true"] a {
-    display: none;
-}
-.actions li:first-child a {
-    background: #e6e6e6;
-    padding-left: 48px;
-}
-.actions li:first-child a:before {
-    content: "\f2ea";
-    left: 26px;
-}
-.actions li:first-child a:hover {
-    background: #ccc;
-}
-.actions li:last-child a {
-    padding-left: 29px;
-    width: 167px;
-    font-weight: 400;
-}
-.actions li:last-child a:before {
-    right: 30px;
-}
+/* Hide the browser's default radio button */
 
-.checkbox {
-    position: relative;
-}
-.checkbox label {
-    padding-left: 21px;
-    cursor: pointer;
-    color: #999;
-}
-.checkbox input {
+.container input[type="radio"] {
     position: absolute;
     opacity: 0;
     cursor: pointer;
 }
-.checkbox input:checked ~ .checkmark:after {
-    display: block;
-}
+
+/* Create a custom radio button */
 
 .checkmark {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
-    height: 12px;
-    width: 13px;
-    border-radius: 2px;
-    background-color: #ebebeb;
-    border: 1px solid #ccc;
-    color: #000;
-    font-size: 10px;
-    font-weight: bolder;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
 }
+
+/* On mouse-over, add a grey background color */
+
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+
+.container input:checked ~ .checkmark {
+    background-color: #2196f3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+
 .checkmark:after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-    content: "\f26b";
-}
-
-.checkbox-circle {
-    margin-top: 41px;
-    margin-bottom: 46px;
-}
-.checkbox-circle label {
-    cursor: pointer;
-    padding-left: 26px;
-    color: #999;
-    display: block;
-    margin-bottom: 15px;
-    position: relative;
-}
-.checkbox-circle label.active .tooltip {
-    display: block;
-}
-.checkbox-circle input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-.checkbox-circle input:checked ~ .checkmark:after {
-    display: block;
-}
-.checkbox-circle .checkmark {
-    position: absolute;
-    top: 11px;
-    left: 0;
-    height: 14px;
-    width: 14px;
-    border-radius: 50%;
-    background: #ebebeb;
-    border: 1px solid #cdcdcd;
-}
-.checkbox-circle .checkmark:after {
     content: "";
-    top: 6px;
-    left: 6px;
-    width: 6px;
-    height: 6px;
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: #666666;
-    position: absolute;
-    display: none;
-}
-.checkbox-circle .tooltip {
-    padding: 9px 22px;
-    background: #f2f2f2;
-    line-height: 1.8;
-    position: relative;
-    margin-top: 16px;
-    margin-bottom: 28px;
-    display: none;
-}
-.checkbox-circle .tooltip:before {
-    content: "";
-    border-bottom: 10px solid #f2f2f2;
-    border-right: 9px solid transparent;
-    border-left: 9px solid transparent;
-    position: absolute;
-    bottom: 100%;
+    background: white;
 }
 
-.product {
-    margin-bottom: 33px;
+/* -------------------------------------------Wizard-------------------------------------------- */
+
+/* ---------------------------------------checkbox----------------------------------------- */
+
+.checkbox-wrapper *,
+.checkbox-wrapper *:after,
+.checkbox-wrapper *:before {
+    box-sizing: border-box;
+    width: 100%;
 }
 
-.item {
+.checkbox-wrapper .checkbox-input {
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.checkbox-wrapper .checkbox-input:checked + .checkbox-tile {
+    border-color: var(--blue-secondary);
+    color: var(--blue-secondary);
+    background-color: #cde0ec;
+}
+
+.checkbox-wrapper .checkbox-input:checked + .checkbox-tile:before {
+    transform: scale(1);
+    opacity: 1;
+    background-color: var(--blue-secondary);
+    border-color: var(--blue-secondary);
+}
+
+.checkbox-wrapper .checkbox-input:checked + .checkbox-tile .checkbox-icon,
+.checkbox-wrapper .checkbox-input:checked + .checkbox-tile .checkbox-label {
+    color: var(--blue-secondary);
+}
+
+.checkbox-wrapper .checkbox-tile {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #e6e6e6;
-    margin-bottom: 30px;
-}
-.item:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border: none;
-}
-.item .left {
-    display: flex;
-    align-items: center;
-}
-.item .thumb {
-    display: inline-flex;
-    width: 100px;
-    height: 90px;
     justify-content: center;
-    align-items: center;
-    border: 1px solid #f2f2f2;
-}
-.item .purchase {
-    display: inline-block;
-    margin-left: 21px;
-}
-.item .purchase h6 {
-    font-size: 16px;
-    margin-bottom: 4px;
-    font-weight: 500;
-}
-.item .purchase h6 a {
-    color: #333;
-}
-.item .price {
-    font-size: 16px;
+    width: 100%;
+    min-height: 3rem;
+    border-radius: 50rem;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    transition: 0.15s ease;
+    cursor: pointer;
+    position: relative;
 }
 
-.checkout {
-    margin-bottom: 44px;
-}
-.checkout span.heading {
-    font-weight: 500;
-    margin-right: 5px;
-}
-.checkout .subtotal {
-    margin-bottom: 18px;
-}
-.checkout .shipping {
-    margin-bottom: 19px;
-}
-.checkout .shipping span.heading {
-    margin-right: 4px;
-}
-.checkout .total-price {
-    color: #333;
-    font-weight: 700;
+.checkbox-wrapper .checkbox-tile:before {
+    display: none !important;
 }
 
-@-webkit-keyframes hvr-icon-wobble-horizontal {
-    16.65% {
-        -webkit-transform: translateX(6px);
-        transform: translateX(6px);
-    }
-    33.3% {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    49.95% {
-        -webkit-transform: translateX(4px);
-        transform: translateX(4px);
-    }
-    66.6% {
-        -webkit-transform: translateX(-2px);
-        transform: translateX(-2px);
-    }
-    83.25% {
-        -webkit-transform: translateX(1px);
-        transform: translateX(1px);
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-@keyframes hvr-icon-wobble-horizontal {
-    16.65% {
-        -webkit-transform: translateX(6px);
-        transform: translateX(6px);
-    }
-    33.3% {
-        -webkit-transform: translateX(-5px);
-        transform: translateX(-5px);
-    }
-    49.95% {
-        -webkit-transform: translateX(4px);
-        transform: translateX(4px);
-    }
-    66.6% {
-        -webkit-transform: translateX(-2px);
-        transform: translateX(-2px);
-    }
-    83.25% {
-        -webkit-transform: translateX(1px);
-        transform: translateX(1px);
-    }
-    100% {
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
-    }
-}
-@media (max-width: 1500px) {
-    .wrapper {
-        height: auto;
-    }
-}
-@media (max-width: 1199px) {
-    .wrapper {
-        height: 100vh;
-    }
-
-    #wizard {
-        margin-right: 40px;
-        min-height: 829px;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-}
-@media (max-width: 991px) {
-    .wrapper {
-        justify-content: center;
-    }
-    .wrapper .image-holder {
-        display: none;
-    }
-    .wrapper form {
-        width: 60%;
-    }
-
-    #wizard {
-        margin-right: 0;
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-@media (max-width: 767px) {
-    .wrapper {
-        height: auto;
-        display: block;
-    }
-    .wrapper .image-holder {
-        width: 100%;
-        display: block;
-    }
-    .wrapper form {
-        width: 100%;
-    }
-
-    #wizard {
-        min-height: unset;
-        padding: 70px 20px 40px;
-    }
-
-    .form-row.form-group {
-        display: block;
-    }
-    .form-row.form-group .form-holder {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 24px;
-    }
-
-    .item .purchase {
-        margin-left: 11px;
-    }
+.checkbox-wrapper .checkbox-icon {
+    transition: 0.375s ease;
+    color: #494949;
 }
 
-/*# sourceMappingURL=style.css.map */
+.checkbox-wrapper .checkbox-icon svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.checkbox-wrapper .checkbox-label {
+    color: #707070;
+    transition: 0.375s ease;
+    text-align: center;
+}
+
+/* ---------------------------------------checkbox----------------------------------------- */
