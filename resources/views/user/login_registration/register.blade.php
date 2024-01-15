@@ -1,16 +1,21 @@
 @extends('layouts.master')
 
 @section('content')
-    <div class="container mt-5">
+    <div class="container-fluid login-screen">
+        <video autoplay muted loop class="bg-video">
+            <source src="{{ url('assets/img/login-reg/bg-video.mp4') }}" type="video/mp4">
+            <!-- Add additional source elements for different video formats (webm, ogg) if necessary -->
+            Your browser does not support the video tag.
+        </video>
 
         <div class="vh-100">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col col-xl-10">
-                        <div class="card" style="border-radius: 1rem;">
+                        <div class="card login-card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
-                                    <img src="assets/img/login-reg/login-img.jpeg" alt="login form" class="img-fluid"
+                                    <img src="assets/img/login-reg/reg-img.jpg" alt="login form" class="img-fluid"
                                         style="border-radius: 1rem 0 0 1rem;" />
                                 </div>
                                 <div class="col-md-6 col-lg-7 d-flex align-items-center text-center justify-content-center">
@@ -205,11 +210,13 @@
                                                             onclick="nextPrev(-1)" style="width:160px;">Previous</button>
                                                         <button type="button" class="btn btn-main p-2" id="nextBtn"
                                                             onclick="nextPrev(1)" style="width:160px;>Next</button>
+                                                                </div>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            </form>
+                                                    </form>
 
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -217,6 +224,4 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
 @endsection

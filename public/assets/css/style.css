@@ -15,14 +15,14 @@ body {
 .btn-main {
     border-radius: 50px !important;
     background-color: var(--blue-primary) !important;
-    border: var(--blue-primary)1px solid !important;
+    border: var(--blue-primary) 1px solid !important;
     color: #fff !important;
     min-height: 3rem;
 }
 
 .btn-main:hover {
     background-color: #002842 !important;
-    border: var(--blue-primary)1px solid;
+    border: var(--blue-primary) 1px solid;
     color: #fff;
 }
 
@@ -33,7 +33,7 @@ body {
     box-shadow: none;
 }
 
-.text-main{
+.text-main {
     color: var(--blue-secondary);
 }
 
@@ -41,14 +41,13 @@ body {
     border-radius: 50px;
 }
 
-.input-group-text{
+.input-group-text {
     border-radius: 50px 0 0 50px !important;
 }
 
-.form-select{
+.form-select {
     border-radius: 0 50px 50px 0 !important;
 }
-
 
 /* ---------------------------------------login----------------------------------------- */
 
@@ -63,7 +62,6 @@ body {
 }
 
 /* ---------------------------------------login----------------------------------------- */
-
 
 /* --------------------------------------- Home ----------------------------------------- */
 .hero-slider {
@@ -523,6 +521,7 @@ body {
 
 .video-js {
     width: 1200px;
+    height: 680px;
 }
 
 .video-container {
@@ -531,6 +530,7 @@ body {
     z-index: 2;
     overflow: hidden;
     height: 680px;
+    background-color: #000;
 }
 
 .video-js source {

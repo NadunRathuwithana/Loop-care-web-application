@@ -34,9 +34,9 @@ input.invalid {
     background-color: #ffdddd;
 }
 
-.input-group-text{
+.input-group-text {
     padding: 0 20px;
-    background-color: transparent !important;
+    background-color: #fff !important;
     border: none;
     color: var(--blue-secondary);
 }
@@ -44,17 +44,17 @@ input.invalid {
 .select-label {
     width: 100%;
     min-height: 3rem;
-    border: none !important;;
+    border: none !important;
     box-shadow: none !important;
 }
 
 .select-label:active {
-    border: none !important;;
+    border: none !important;
     box-shadow: none !important;
 }
 
 .select-label:focus {
-    border: none !important;;
+    border: none !important;
     box-shadow: none !important;
 }
 
@@ -62,18 +62,17 @@ input.invalid {
     background-color: #ffdddd;
 }
 
-
-.select-label option{
+.select-label option {
     text-align: start !important;
 }
 
-.select-label option:hover{
+.select-label option:hover {
     background-color: #cde0ec !important;
 }
 
 .selectWizard {
     width: 100%;
-    border: 2px solid #b5bfd9 ;
+    border: 2px solid #b5bfd9;
     min-height: 3rem;
     border-radius: 50px;
 }
@@ -83,7 +82,6 @@ input.invalid {
 }
 
 /* Add your existing styles here */
-
 
 .tab {
     display: none;
@@ -216,6 +214,10 @@ input.invalid {
     background-color: #cde0ec;
 }
 
+.checkbox-wrapper .checkbox-input:hover + .checkbox-tile {
+    border-color: var(--blue-secondary);
+}
+
 .checkbox-wrapper .checkbox-input:checked + .checkbox-tile:before {
     transform: scale(1);
     opacity: 1;
@@ -264,3 +266,42 @@ input.invalid {
 }
 
 /* ---------------------------------------checkbox----------------------------------------- */
+
+/* video */
+
+.login-screen {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bg-video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.login-card {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.23);
+}
