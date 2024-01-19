@@ -33,6 +33,25 @@ body {
     box-shadow: none;
 }
 
+.btn-white-outline {
+    border-radius: 50px !important;
+    background-color: rgb(116,234,218);
+    border: var(--blue-primary) 2px solid;
+    color: var(--blue-primary);
+    min-height: 3rem;
+}
+
+.btn-white-outline:hover {
+    background-color: rgb(79, 206, 189) !important;
+    border: var(--blue-primary) 2px solid;
+    color: var(--blue-primary);
+}
+
+.btn-white-outline:focus,
+.btn-white-outline:active {
+    box-shadow: none;
+}
+
 .text-main {
     color: var(--blue-secondary);
 }
@@ -59,6 +78,17 @@ body {
 
 .reglink:hover {
     color: #4e319e;
+}
+.logo-reg-screen{
+    width: 200px;
+    height: auto;
+}
+
+.login-img{
+    border-radius: 1rem 0 0 1rem;
+    height: 100%;
+    width: auto;
+    object-fit: cover;
 }
 
 /* ---------------------------------------login----------------------------------------- */

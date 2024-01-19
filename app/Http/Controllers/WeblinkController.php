@@ -76,7 +76,7 @@ class WeblinkController extends Controller
     public function Login()
     {
         try {
-            return view('user/login_registration/login');
+            return view('user/auth/login');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -85,7 +85,7 @@ class WeblinkController extends Controller
     public function RegStart()
     {
         try {
-            return view('user/login_registration/regStart');
+            return view('user/auth/regStart');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -94,7 +94,7 @@ class WeblinkController extends Controller
     public function Reg1()
     {
         try {
-            return view('user/login_registration/reg1');
+            return view('user/auth/reg1');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -103,50 +103,26 @@ class WeblinkController extends Controller
     public function Reg2()
     {
         try {
-            return view('user/login_registration/reg2');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-    public function Reg3()
-    {
-        try {
-            return view('user/login_registration/reg3');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-    public function Reg4()
-    {
-        try {
-            return view('user/login_registration/reg4');
+            return view('user/auth/reg2');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
     }
 
-    public function Reg5()
+
+    public function Register_Trainer()
     {
         try {
-            return view('user/login_registration/reg5');
+            return view('user/auth/register_trainer');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
     }
 
-    public function Reg6()
+    public function Register_Doctor()
     {
         try {
-            return view('user/login_registration/reg6');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-
-    public function Reg7()
-    {
-        try {
-            return view('user/login_registration/reg7');
+            return view('user/auth/register_doctor');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -155,7 +131,7 @@ class WeblinkController extends Controller
     public function Register()
     {
         try {
-            return view('user/login_registration/register');
+            return view('user/auth/register');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -172,6 +148,44 @@ class WeblinkController extends Controller
             return redirect('/maintenance');
         }
     }
+
+    public function AdminLogin()
+    {
+        try {
+            return view('admin/auth/login');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+
+    public function Users()
+    {
+        try {
+            return view('admin/users/users');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function AddUser()
+    {
+        try {
+            return view('admin/users/add_user');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function EditUser()
+    {
+        try {
+            return view('admin/users/edit_user');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
 
     // ---------------------------------------Admin -----------------------------------------------------------------------------
 }

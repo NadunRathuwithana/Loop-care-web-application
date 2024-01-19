@@ -38,10 +38,6 @@ function nextPrev(n) {
         document.getElementById("all-steps").style.display = "none";
         document.getElementById("register").style.display = "none";
         document.getElementById("text-message").style.display = "block";
-
-
-
-
     }
     showTab(currentTab);
 }
@@ -74,3 +70,10 @@ $(document).ready(function () {
     });
 });
 
+// upload file
+function displaySelectedFileName(input) {
+ 
+   var fileName = input.files[0].name;
+    var container = input.closest('.file-upload-container');
+    container.querySelector('.selected-file-name').innerHTML = fileName;
+}

@@ -15,13 +15,13 @@
                         <div class="card login-card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
-                                    <img src="assets/img/login-reg/reg-img.jpg" alt="login form" class="img-fluid"
-                                        style="border-radius: 1rem 0 0 1rem;" />
+                                    <img src="assets/img/login-reg/reg_patient.jpg" alt="login form" class="img-fluid login-img"/>
                                 </div>
                                 <div class="col-md-6 col-lg-7 d-flex align-items-center text-center justify-content-center">
                                     <div class="card-body p-4 p-lg-5 text-black">
                                         <div class="form-group pt-3 mb-5">
-                                            <h3>Sign Up to Loop Care</h3>
+                                            <h2 class="fw-bold">Welcome to Loop Care</h2>
+                                            <p class="text-secondary">Patient Registration</p>
                                         </div>
 
                                         <form action="">
@@ -195,7 +195,7 @@
                                                             <label class="checkbox-wrapper">
                                                                 <input class="checkbox-input" type="checkbox">
                                                                 <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">No I haven't pains</span>
+                                                                    <span class="checkbox-label">No I have not pains</span>
                                                                 </span>
                                                             </label>
                                                         </div>
@@ -209,19 +209,19 @@
                                                         <button type="button" class="btn btn-main" id="prevBtn"
                                                             onclick="nextPrev(-1)" style="width:160px;">Previous</button>
                                                         <button type="button" class="btn btn-main p-2" id="nextBtn"
-                                                            onclick="nextPrev(1)" style="width:160px;>Next</button>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-
+                                                            onclick="nextPrev(1)" style="width:160px;">Next</button>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 @endsection

@@ -11,7 +11,7 @@
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
                     <div class="col col-xl-10">
-                        <div class="card  login-card"" style="border-radius: 1rem;">
+                        <div class="card  login-card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
                                     <img src="assets/img/login-reg/login-img.jpeg" alt="login form" class="img-fluid"
@@ -47,18 +47,18 @@
                                         <form action="{{ url('signIn') }}" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
-                                            <div class="form-group pt-3 mb-5">
-                                                <h3>Log In to Loop Care</h3>
+                                            <div class="form-group pt-3 mb-5 text-center">
+                                                <h2 class="fw-bold">Welcome to Loop Care</h2>
                                             </div>
 
                                             <div class="form-group pt-5">
                                                 <input type="email" class="form-control input py-2 px-4" id="email"
-                                                    name="email" aria-describedby="emailHelp" placeholder="Email">
+                                                    name="email" aria-describedby="emailHelp" placeholder="Email" required>
                                             </div>
 
                                             <div class="form-group pt-3">
                                                 <input type="password" class="form-control input py-2 px-4" id="password"
-                                                    name="password" placeholder="Password">
+                                                    name="password" placeholder="Password" required>
                                             </div>
 
                                             <div class="pt-3 mb-4">
@@ -68,7 +68,7 @@
 
                                             <a class="small text-muted" href="#!">Forgot password?</a>
                                             <p class="pt-5 mb-5 pb-lg-2">Don't have an account?
-                                                <a href="{{ url('/regStart') }}"class="reglink">Register here</a>
+                                                <a href="{{ url('regStart') }}" class="reglink">Register here</a>
                                             </p>
                                         </form>
 

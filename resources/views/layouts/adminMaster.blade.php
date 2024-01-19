@@ -16,7 +16,7 @@
     <link rel="icon" type="image/x-icon" href="assets/admin/assets/img/favicon/favicon.ico" />
 
     {{-- STYLE CSS --}}
-    @include('layouts.adminStyles')
+    @include('layouts.adminStyle')
 
 </head>
 
