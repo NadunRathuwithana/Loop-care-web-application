@@ -48,6 +48,9 @@ Route::get('user_management', [WeblinkController::class, 'Users']);
 Route::get('add_user', [WeblinkController::class, 'AddUser']);
 Route::get('edit_user', [WeblinkController::class, 'EditUser']);
 
+Route::get('signup_management', [WeblinkController::class, 'Questions']);
+
+
 
 
 

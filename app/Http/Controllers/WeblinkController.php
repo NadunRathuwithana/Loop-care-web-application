@@ -186,6 +186,15 @@ class WeblinkController extends Controller
         }
     }
 
+    public function Questions()
+    {
+        try {
+            return view('admin/signup_management/questions');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
 
     // ---------------------------------------Admin -----------------------------------------------------------------------------
 }

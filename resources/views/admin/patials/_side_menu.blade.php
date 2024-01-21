@@ -63,7 +63,7 @@
         <!-- Sign Up Management -->
         <li class="menu-item">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('signup_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-arrow-to-right"></i>
                 <div data-i18n="Analytics">Sign Up Management</div>
             </a>
@@ -118,22 +118,22 @@
         <!-- Admin Controller -->
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
-              <i class="menu-icon tf-icons bx bx-user"></i>
-              <div data-i18n="Account Settings">User Management</div>
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="Account Settings">User Management</div>
             </a>
             <ul class="menu-sub">
-              <li class="menu-item">
-                <a href="{{ url('add_user') }}" class="menu-link">
-                  <div data-i18n="Account">Add Users</div>
-                </a>
-              </li>
-              <li class="menu-item">
-                <a href="{{ url('user_management') }}" class="menu-link">
-                  <div data-i18n="Notifications">Manage Users</div>
-                </a>
-              </li>
+                <li class="menu-item">
+                    <a href="{{ url('add_user') }}" class="menu-link">
+                        <div data-i18n="Account">Add Users</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="{{ url('user_management') }}" class="menu-link">
+                        <div data-i18n="Notifications">Manage Users</div>
+                    </a>
+                </li>
             </ul>
-          </li>
+        </li>
 
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Settings</span>
