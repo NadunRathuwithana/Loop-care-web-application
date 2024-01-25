@@ -1,7 +1,7 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="index.html" class="app-brand-link">
-            <span class="app-brand-text demo menu-text fw-bolder ms-2">Loop Care</span>
+        <a href="{{ url('admin') }}" class="app-brand-link">
+            <img class="img-fluid" src="assets/img/navPrimary.png" alt="" style="padding: 20px;">
         </a>
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
             <i class="bx bx-chevron-left bx-sm align-middle"></i>
@@ -11,10 +11,9 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
-        <!-- Dashboard -->
-        <li class="menu-item active">
-            <!-- link -->
-            <a href="index.html" class="menu-link">
+        {{--  Dashboard  --}}
+        <li class="menu-item  {{ Request::is('admin') ? 'active' : '' }}">
+            <a href="{{ url('admin') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-home-circle"></i>
                 <div data-i18n="Analytics">Dashboard</div>
             </a>
@@ -24,26 +23,17 @@
             <span class="menu-header-text">Management</span>
         </li>
 
-        <!-- User Management -->
-        <!-- <li class="menu-item">
-
-            <a href="index.html" class="menu-link">
-              <i class="menu-icon tf-icons bx bx-user"></i>
-              <div data-i18n="Analytics">User Management</div>
-            </a>
-          </li> -->
-
-        <!-- workout Management -->
-        <li class="menu-item">
+        {{--  workout Management  --}}
+        <li class="menu-item {{ Request::is('workout_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('workout_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-dumbbell"></i>
                 <div data-i18n="Analytics">Workout Management</div>
             </a>
         </li>
 
-        <!-- Meal Management -->
-        <li class="menu-item">
+        {{--  Meal Management  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-food-menu"></i>
@@ -51,8 +41,8 @@
             </a>
         </li>
 
-        <!-- Goal Management -->
-        <li class="menu-item">
+        {{--  Goal Management  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-medal"></i>
@@ -60,13 +50,32 @@
             </a>
         </li>
 
-        <!-- Sign Up Management -->
-        <li class="menu-item">
+        {{--  Sign Up Management  --}}
+        <li
+            class="menu-item {{ Request::is('pending_request') || Request::is('all_users') || Request::is('questions_setup') ? 'active' : '' }}">
             <!-- link -->
-            <a href="{{ url('signup_management') }}" class="menu-link">
+            <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx-arrow-to-right"></i>
-                <div data-i18n="Analytics">Sign Up Management</div>
+                <div data-i18n="Analytics">User Management</div>
             </a>
+
+            <ul class="menu-sub">
+                <li class="menu-item {{ Request::is('pending_request') ? 'active' : '' }}">
+                    <a href="{{ url('pending_request') }}" class="menu-link">
+                        <div data-i18n="Without menu">Pending Requests</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ Request::is('all_users') ? 'active' : '' }}">
+                    <a href="{{ url('all_users') }}" class="menu-link">
+                        <div data-i18n="Without navbar">All Users</div>
+                    </a>
+                </li>
+                <li class="menu-item {{ Request::is('questions_setup') ? 'active' : '' }}">
+                    <a href="{{ url('questions_setup') }}" class="menu-link">
+                        <div data-i18n="Container">Question Setup</div>
+                    </a>
+                </li>
+            </ul>
         </li>
 
 
@@ -74,8 +83,8 @@
             <span class="menu-header-text">Live</span>
         </li>
 
-        <!-- Appointment -->
-        <li class="menu-item">
+        {{--  Appointment  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-health"></i>
@@ -83,8 +92,8 @@
             </a>
         </li>
 
-        <!-- Live session -->
-        <li class="menu-item">
+        {{--  Live session  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-tv"></i>
@@ -97,8 +106,8 @@
             <span class="menu-header-text">Reports & Other</span>
         </li>
 
-        <!-- Review Management -->
-        <li class="menu-item">
+        {{--  Review Management  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-star"></i>
@@ -106,8 +115,8 @@
             </a>
         </li>
 
-        <!-- Reports -->
-        <li class="menu-item">
+        {{--  Reports  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-stats"></i>
@@ -115,31 +124,20 @@
             </a>
         </li>
 
-        <!-- Admin Controller -->
-        <li class="menu-item">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
-                <i class="menu-icon tf-icons bx bx-user"></i>
-                <div data-i18n="Account Settings">User Management</div>
-            </a>
-            <ul class="menu-sub">
-                <li class="menu-item">
-                    <a href="{{ url('add_user') }}" class="menu-link">
-                        <div data-i18n="Account">Add Users</div>
-                    </a>
-                </li>
-                <li class="menu-item">
-                    <a href="{{ url('user_management') }}" class="menu-link">
-                        <div data-i18n="Notifications">Manage Users</div>
-                    </a>
-                </li>
-            </ul>
-        </li>
-
         <li class="menu-header small text-uppercase">
             <span class="menu-header-text">Settings</span>
         </li>
 
-        <li class="menu-item">
+        {{--  Manage Users  --}}
+        <li class="menu-item {{ Request::is('user_management') ? 'active' : '' }}">
+            <a href="{{ url('user_management') }}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx-user"></i>
+                <div data-i18n="Account Settings">Admin Management</div>
+            </a>
+        </li>
+
+        {{--  Account Settings  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
@@ -147,7 +145,8 @@
             </a>
         </li>
 
-        <li class="menu-item">
+        {{--  Logout  --}}
+        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
             <a href="index.html" class="menu-link text-danger">
                 <i class="menu-icon tf-icons bx bx-log-out"></i>

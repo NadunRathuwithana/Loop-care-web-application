@@ -140,10 +140,10 @@ class WeblinkController extends Controller
 
     // ---------------------------------------Admin -----------------------------------------------------------------------------
 
-    public function Admin()
+    public function Dashboard()
     {
         try {
-            return view('admin/admin');
+            return view('admin/admin_dashboard');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -168,28 +168,37 @@ class WeblinkController extends Controller
         }
     }
 
-    public function AddUser()
-    {
-        try {
-            return view('admin/users/add_user');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-
-    public function EditUser()
-    {
-        try {
-            return view('admin/users/edit_user');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-
     public function Questions()
     {
         try {
             return view('admin/signup_management/questions');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function PendingRequest()
+    {
+        try {
+            return view('admin/signup_management/pending_request');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function AllUsers()
+    {
+        try {
+            return view('admin/signup_management/all_users');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function WorkoutManagement()
+    {
+        try {
+            return view('admin/workout/workout');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }

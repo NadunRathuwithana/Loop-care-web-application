@@ -34,21 +34,15 @@ Route::get('register_trainer', [WeblinkController::class, 'Register_Trainer']);
 
 //admin
 
-Route::get('admin', [WeblinkController::class, 'Admin']);
+Route::get('admin', [WeblinkController::class, 'Dashboard']);
 
 Route::get('admin/login', [WeblinkController::class, 'AdminLogin']);
 
-
-Route::middleware('auth:sanctum')->group(function () {
-
-    Route::get('/dashboard', [UserController::class, 'Dashboard']);
-});
-
 Route::get('user_management', [WeblinkController::class, 'Users']);
-Route::get('add_user', [WeblinkController::class, 'AddUser']);
-Route::get('edit_user', [WeblinkController::class, 'EditUser']);
-
-Route::get('signup_management', [WeblinkController::class, 'Questions']);
+Route::get('questions_setup', [WeblinkController::class, 'Questions']);
+Route::get('pending_request', [WeblinkController::class, 'PendingRequest']);
+Route::get('all_users', [WeblinkController::class, 'AllUsers']);
+Route::get('workout_management', [WeblinkController::class, 'WorkoutManagement']);
 
 
 

@@ -15,7 +15,7 @@
 
                 <div class="container-xxl flex-grow-1 container-p-y">
                     <div class="d-flex justify-content-between  py-3 mb-4">
-                        <h4 class="fw-bold"><span class="text-muted fw-light"></span>Sign Up Management</h4>
+                        <h4 class="fw-bold"><span class="text-muted fw-light"></span>Question Management</h4>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-modal">
                             Add Question
                         </button>

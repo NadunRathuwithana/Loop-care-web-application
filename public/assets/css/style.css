@@ -35,16 +35,16 @@ body {
 
 .btn-white-outline {
     border-radius: 50px !important;
-    background-color: rgb(116,234,218);
-    border: var(--blue-primary) 2px solid;
-    color: var(--blue-primary);
+    background-color: #750080;
+    border: #46004d 2px solid;
+    color: var(--blue-light);
     min-height: 3rem;
 }
 
 .btn-white-outline:hover {
-    background-color: rgb(79, 206, 189) !important;
-    border: var(--blue-primary) 2px solid;
-    color: var(--blue-primary);
+    background-color: #65006e !important;
+    border: #46004d 2px solid;
+    color: var(--blue-light);
 }
 
 .btn-white-outline:focus,

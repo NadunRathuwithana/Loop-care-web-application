@@ -26,4 +26,10 @@
     display: none;
 }
 
+.btn-secondary-2 {
+    background-color: #f7f8f9;
+}
 
+.btn-secondary-2:hover {
+    background-color: #ececec;
+}
