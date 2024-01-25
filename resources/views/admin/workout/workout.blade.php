@@ -38,7 +38,7 @@
                             </li>
 
                         </ul>
-                        <div class="tab-content pt-0" id="pills-tabContent">
+                        <div class="tab-content pt-0appointment" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-all" role="tabpanel"
                                 aria-labelledby="pills-all-tab" tabindex="0">
 

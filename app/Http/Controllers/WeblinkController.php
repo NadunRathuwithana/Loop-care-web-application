@@ -137,6 +137,23 @@ class WeblinkController extends Controller
         }
     }
 
+    public function NotFound()
+    {
+        try {
+            return view('admin/error/404');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    public function Maintenance()
+    {
+        try {
+            return view('admin/error/maintenance');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
 
     // ---------------------------------------Admin -----------------------------------------------------------------------------
 
@@ -203,6 +220,65 @@ class WeblinkController extends Controller
             return redirect('/maintenance');
         }
     }
+    public function Account()
+    {
+        try {
+            return view('admin/account/account');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function AppointmentManagement()
+    {
+        try {
+            return view('admin/appointments/appointments');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    public function GoalManagement()
+    {
+        try {
+            return view('admin/goals/goals');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    public function MealManagement()
+    {
+        try {
+            return view('admin/meals/meals');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    public function LiveSessions()
+    {
+        try {
+            return view('admin/live_sessions/live_sessions');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    public function Reviews()
+    {
+        try {
+            return view('admin/reviews/reviews');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function Report()
+    {
+        try {
+            return view('admin/report/report');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
 
 
     // ---------------------------------------Admin -----------------------------------------------------------------------------

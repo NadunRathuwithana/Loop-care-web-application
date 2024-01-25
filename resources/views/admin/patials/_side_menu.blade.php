@@ -33,18 +33,18 @@
         </li>
 
         {{--  Meal Management  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('meal_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('meal_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-food-menu"></i>
                 <div data-i18n="Analytics">Meal Management</div>
             </a>
         </li>
 
         {{--  Goal Management  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('goal_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('goal_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-medal"></i>
                 <div data-i18n="Analytics">Goal Management</div>
             </a>
@@ -84,18 +84,18 @@
         </li>
 
         {{--  Appointment  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('appointments_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('appointments_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-health"></i>
                 <div data-i18n="Analytics">Appointments</div>
             </a>
         </li>
 
         {{--  Live session  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('live_sessions_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('live_sessions_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-tv"></i>
                 <div data-i18n="Analytics">Live Sessions</div>
             </a>
@@ -107,18 +107,18 @@
         </li>
 
         {{--  Review Management  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('review_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('review_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-star"></i>
                 <div data-i18n="Analytics">Customer Reviews</div>
             </a>
         </li>
 
         {{--  Reports  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('report_management') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('report_management') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-stats"></i>
                 <div data-i18n="Analytics">Reports</div>
             </a>
@@ -137,9 +137,9 @@
         </li>
 
         {{--  Account Settings  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item {{ Request::is('admin_account') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link">
+            <a href="{{ url('admin_account') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
                 <div data-i18n="Analytics">Account Settings</div>
             </a>
@@ -148,7 +148,7 @@
         {{--  Logout  --}}
         <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
-            <a href="index.html" class="menu-link text-danger">
+            <a href="{{ url('') }}" class="menu-link text-danger">
                 <i class="menu-icon tf-icons bx bx-log-out"></i>
                 <div data-i18n="Analytics">Logout</div>
             </a>

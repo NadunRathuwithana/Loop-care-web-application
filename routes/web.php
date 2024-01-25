@@ -31,6 +31,9 @@ Route::get('register', [WeblinkController::class, 'Register']);
 Route::get('register_doctor', [WeblinkController::class, 'Register_Doctor']);
 Route::get('register_trainer', [WeblinkController::class, 'Register_Trainer']);
 
+Route::get('404', [WeblinkController::class, 'NotFound']);
+Route::get('maintenance', [WeblinkController::class, 'Maintenance']);
+
 
 //admin
 
@@ -43,6 +46,14 @@ Route::get('questions_setup', [WeblinkController::class, 'Questions']);
 Route::get('pending_request', [WeblinkController::class, 'PendingRequest']);
 Route::get('all_users', [WeblinkController::class, 'AllUsers']);
 Route::get('workout_management', [WeblinkController::class, 'WorkoutManagement']);
+Route::get('admin_account', [WeblinkController::class, 'Account']);
+Route::get('appointments_management', [WeblinkController::class, 'AppointmentManagement']);
+Route::get('goal_management', [WeblinkController::class, 'GoalManagement']);
+Route::get('meal_management', [WeblinkController::class, 'MealManagement']);
+Route::get('live_sessions_management', [WeblinkController::class, 'LiveSessions']);
+Route::get('review_management', [WeblinkController::class, 'Reviews']);
+Route::get('report_management', [WeblinkController::class, 'Report']);
+
 
 
 
