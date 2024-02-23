@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+<link href="{{ url('assets/css/wizard.css') }}" rel="stylesheet">
+
 @section('content')
     <div class="container-fluid login-screen">
         <video autoplay muted loop class="bg-video">

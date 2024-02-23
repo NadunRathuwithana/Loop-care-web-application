@@ -18,4 +18,4 @@
 <link href="{{ url('assets/css/style.css') }}" rel="stylesheet">
 <link href="{{ url('assets/css/nav.css') }}" rel="stylesheet">
 <link href="{{ url('assets/css/player.css') }}" rel="stylesheet">
-<link href="{{ url('assets/css/wizard.css') }}" rel="stylesheet">
+

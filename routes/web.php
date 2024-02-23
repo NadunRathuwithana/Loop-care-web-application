@@ -5,26 +5,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeblinkController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-Route::get('', [WeblinkController::class, 'Home']);
-Route::get('workouts', [WeblinkController::class, 'Workouts']);
-Route::get('single-workout', [WeblinkController::class, 'SingleWorkout']);
-Route::get('singleVideo', [WeblinkController::class, 'SingleVideo']);
-Route::get('appointment', [WeblinkController::class, 'Appointment']);
-Route::get('meals', [WeblinkController::class, 'Meals']);
-Route::get('goals', [WeblinkController::class, 'Goals']);
-
-
+// //////////////////---common---///////////////
 Route::get('login', [WeblinkController::class, 'Login']);
 Route::get('regStart', [WeblinkController::class, 'RegStart']);
 Route::get('register', [WeblinkController::class, 'Register']);
@@ -35,8 +16,27 @@ Route::get('404', [WeblinkController::class, 'NotFound']);
 Route::get('maintenance', [WeblinkController::class, 'Maintenance']);
 
 
-//admin
+// ////////////////----Patient----/////////////////////
+Route::get('', [WeblinkController::class, 'Home']);
+Route::get('workouts', [WeblinkController::class, 'Workouts']);
+Route::get('single-workout', [WeblinkController::class, 'SingleWorkout']);
+Route::get('singleVideo', [WeblinkController::class, 'SingleVideo']);
+Route::get('appointment', [WeblinkController::class, 'Appointment']);
+Route::get('meals', [WeblinkController::class, 'Meals']);
+Route::get('single-meal', [WeblinkController::class, 'SingleMeal']);
+Route::get('goals', [WeblinkController::class, 'Goals']);
+Route::get('single-goal', [WeblinkController::class, 'SingleGoal']);
 
+
+// ////////////////----Trainer----/////////////////////
+Route::get('/trainer', [WeblinkController::class, 'TrainerHome']);
+Route::get('/trainer/workouts', [WeblinkController::class, 'TrainerWorkouts']);
+Route::get('/trainer/workouts/create', [WeblinkController::class, 'CreateWorkout']);
+Route::get('/trainer/singlePlaylist', [WeblinkController::class, 'SinglePlaylist']);
+
+
+
+// ////////////////----Admin----/////////////////////
 Route::get('admin', [WeblinkController::class, 'Dashboard']);
 
 Route::get('admin/login', [WeblinkController::class, 'AdminLogin']);

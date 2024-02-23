@@ -7,9 +7,9 @@
                 <h5 class="modal-title" id="exampleModalLabel1">Workout Info</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form>
-                <div class="modal-body">
 
+            <div class="modal-body">
+                <form>
                     <div class="row">
                         <div class="mb-3">
                             <img src="https://picsum.photos/300/200" alt=""
@@ -46,13 +46,14 @@
                             </div>
                         </div>
                     </div>
+                </form>
+            </div>
 
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-outline-danger">Reject</button>
-                    <button type="button" class="btn btn-primary">Apporve</button>
-                </div>
-            </form>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger">Reject</button>
+                <button type="button" class="btn btn-primary">Apporve</button>
+            </div>
+
         </div>
     </div>
 </div>

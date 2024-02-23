@@ -72,8 +72,33 @@ $(document).ready(function () {
 
 // upload file
 function displaySelectedFileName(input) {
- 
+
    var fileName = input.files[0].name;
     var container = input.closest('.file-upload-container');
     container.querySelector('.selected-file-name').innerHTML = fileName;
+}
+
+// select 2
+
+$(document).ready(function() {
+    $('.multiple').select2();
+});
+
+
+// image upload
+window.onload = function() {
+    var imageUploaders = document.querySelectorAll('.image-upload');
+    imageUploaders.forEach(function(uploader) {
+        uploader.addEventListener('change', previewImage);
+    });
+}
+
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+        var output = event.target.parentNode.querySelector('.image-preview');
+        output.src = reader.result;
+        output.style.display = 'block';
+    };
+    reader.readAsDataURL(event.target.files[0]);
 }

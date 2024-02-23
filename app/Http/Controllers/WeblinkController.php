@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Http;
 
 class WeblinkController extends Controller
 {
+
+    ///////////////////////////////////////////////////////////// user/////////////////////////////////////////////////////
     public function Home()
     {
         try {
@@ -48,7 +50,7 @@ class WeblinkController extends Controller
     public function Appointment()
     {
         try {
-            return view('user/appointment');
+            return view('user/appointment/index');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -57,7 +59,16 @@ class WeblinkController extends Controller
     public function Meals()
     {
         try {
-            return view('user/meals');
+            return view('user/meals/index');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function SingleMeal()
+    {
+        try {
+            return view('user/meals/patials/view');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -66,7 +77,15 @@ class WeblinkController extends Controller
     public function Goals()
     {
         try {
-            return view('user/goals');
+            return view('user/goals/index');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    public function SingleGoal()
+    {
+        try {
+            return view('user/goals/patials/view');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -136,6 +155,9 @@ class WeblinkController extends Controller
             return redirect('/maintenance');
         }
     }
+
+    ///////////////////////////////////////////////////////////// user/////////////////////////////////////////////////////
+
 
     public function NotFound()
     {
@@ -282,4 +304,44 @@ class WeblinkController extends Controller
 
 
     // ---------------------------------------Admin -----------------------------------------------------------------------------
+
+    // ---------------------------------------Trainer -----------------------------------------------------------------------------
+    public function TrainerHome()
+    {
+        try {
+            return view('trainer/index');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function CreateWorkout()
+    {
+        try {
+            return view('trainer/myWorkout/patials/create');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function TrainerWorkouts()
+    {
+        try {
+            return view('trainer/myWorkout/myWorkout');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function SinglePlaylist()
+    {
+        try {
+            return view('trainer/myWorkout/singlePlaylist');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    // ---------------------------------------Trainer -----------------------------------------------------------------------------
+
 }

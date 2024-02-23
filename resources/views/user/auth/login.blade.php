@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+<link href="{{ url('assets/css/wizard.css') }}" rel="stylesheet">
+
 @section('content')
     <div class="container-fluid">
         <video autoplay muted loop class="bg-video">
@@ -53,7 +55,8 @@
 
                                             <div class="form-group pt-5">
                                                 <input type="email" class="form-control input py-2 px-4" id="email"
-                                                    name="email" aria-describedby="emailHelp" placeholder="Email" required>
+                                                    name="email" aria-describedby="emailHelp" placeholder="Email"
+                                                    required>
                                             </div>
 
                                             <div class="form-group pt-3">
@@ -67,10 +70,11 @@
                                             </div>
 
                                             <a class="small text-muted" href="#!">Forgot password?</a>
-                                            <p class="pt-5 mb-5 pb-lg-2">Don't have an account?
-                                                <a href="{{ url('regStart') }}" class="reglink">Register here</a>
-                                            </p>
+
                                         </form>
+                                        <p class="pt-5 mb-5 pb-lg-2">Don't have an account?
+                                            <a href="{{ url('regStart') }}" class="reglink">Register here</a>
+                                        </p>
 
                                     </div>
                                 </div>

@@ -17,7 +17,7 @@
                     <div class="d-flex justify-content-between  py-3 mb-4">
                         <h4 class="fw-bold"><span class="text-muted fw-light"></span>User Management</h4>
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#create-modal">
-                            Add User
+                            Create User
                         </button>
                     </div>
 
@@ -53,8 +53,9 @@
                                                     <i class="bx bx-dots-vertical-rounded"></i>
                                                 </button>
                                                 <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#edit-modal"><i
-                                                        class="bx bx-edit-alt me-1"></i> Edit</a>
+                                                    <a class="dropdown-item" href="javascript:void(0)"
+                                                        data-bs-toggle="modal" data-bs-target="#edit-modal"><i
+                                                            class="bx bx-edit-alt me-1"></i> Edit</a>
                                                     <a class="dropdown-item" href="edit_user"><i
                                                             class='bx bx-info-circle'></i> Deactivate</a>
                                                     <a class="dropdown-item text-danger" href="javascript:void(0);"><i

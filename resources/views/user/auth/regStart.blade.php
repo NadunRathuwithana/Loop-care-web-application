@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+<link href="{{ url('assets/css/wizard.css') }}" rel="stylesheet">
+
 @section('content')
     <div class="background-div"
         style="background-image: url('assets/img/login-reg/reg-bg.jpg'); background-size: cover; height: 100%; width: auto;">

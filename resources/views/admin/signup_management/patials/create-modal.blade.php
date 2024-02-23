@@ -28,7 +28,6 @@
                         </div>
                     </div>
                     <div class="row g-2">
-
                         <div class="col mb-0">
                             <label for="answer" class="form-label">Answers</label>
                             <div class="answers-container">
