@@ -96,7 +96,7 @@
                                             id="new_password" name="new_password" minlength="6" />
                                     </div>
                                     <div class="mb-3 col-md-6">
-                                        <label for="confirm_password" class="form-label">First Name</label>
+                                        <label for="confirm_password" class="form-label">Confirm Password</label>
                                         <input class="form-control" type="password" placeholder="Confirm password"
                                             id="confirm_password" name="confirm_password" minlength="6" />
                                     </div>

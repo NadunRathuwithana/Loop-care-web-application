@@ -24,12 +24,12 @@
                     <div class="card">
                         <h5 class="card-header">All Goals</h5>
                         <div class="table-responsive text-nowrap overflow-visible">
-                            <table class="table">
+                            <table class="table" id="table">
                                 <thead>
                                     <tr>
                                         <th>Name</th>
                                         <th>Email</th>
-                                        <th>Role</th>
+                                        {{-- <th>Role</th> --}}
                                         <th>Status</th>
                                         <th>Actions</th>
                                     </tr>
@@ -75,6 +75,67 @@
         </div>
     </div>
 
-    @include('admin.users.patials.create-modal')
-    @include('admin.users.patials.edit-modal')
+    @include('admin.goals.patials.create')
+    @include('admin.goals.patials.edit')
+@endsection
+@section('scripts')
+    <script>
+       $(document).ready(function() {
+            var table = $('#table').DataTable({
+                processing: true,
+                serverSide: true,
+                destroy: true,
+                ajax: {
+                    url: "{{ route('goal.get-goal') }}",
+                },
+                columns: [
+                    {
+                        data: 'first_name',
+                        name: 'first_name',
+                        orderable: false,
+                        searchable: false
+                    },
+                    {
+                        data: 'email',
+                        name: 'email',
+                        orderable: false,
+                        searchable: false
+                    },
+                    {
+                        data: 'is_active',
+                        name: 'is_active',
+                        orderable: false,
+                        searchable: false
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false,
+                        searchable: false
+                    },
+                ]
+            });
+
+        });
+
+        //delete farm
+        function submitDeleteForm(form) {
+        new Swal({
+                title: "Are you sure?",
+                text: "to delete this vessel list?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Yes Delete",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+            })
+            .then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        return false;
+        }
+    </script>
 @endsection

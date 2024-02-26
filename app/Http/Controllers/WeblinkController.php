@@ -23,7 +23,7 @@ class WeblinkController extends Controller
     public function Workouts()
     {
         try {
-            return view('user/workouts');
+            return view('user/workouts/index');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -32,7 +32,7 @@ class WeblinkController extends Controller
     public function SingleWorkout()
     {
         try {
-            return view('user/single-workout');
+            return view('user/workouts/single-workout');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -41,7 +41,7 @@ class WeblinkController extends Controller
     public function SingleVideo()
     {
         try {
-            return view('user/singleVideo');
+            return view('user/workouts/singleVideo');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -151,6 +151,15 @@ class WeblinkController extends Controller
     {
         try {
             return view('user/auth/register');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function Profile()
+    {
+        try {
+            return view('user/profile/index');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -301,9 +310,9 @@ class WeblinkController extends Controller
         }
     }
 
-
-
     // ---------------------------------------Admin -----------------------------------------------------------------------------
+
+
 
     // ---------------------------------------Trainer -----------------------------------------------------------------------------
     public function TrainerHome()
@@ -315,28 +324,10 @@ class WeblinkController extends Controller
         }
     }
 
-    public function CreateWorkout()
-    {
-        try {
-            return view('trainer/myWorkout/patials/create');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-
     public function TrainerWorkouts()
     {
         try {
-            return view('trainer/myWorkout/myWorkout');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
-
-    public function SinglePlaylist()
-    {
-        try {
-            return view('trainer/myWorkout/singlePlaylist');
+            return view('trainer/myWorkout/index');
         } catch (Exception $e) {
             return redirect('/maintenance');
         }

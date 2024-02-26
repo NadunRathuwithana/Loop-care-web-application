@@ -1,0 +1,21 @@
+
+/* --------------------------------------- single video ----------------------------------------- */
+
+.video-js {
+    width: 1200px;
+    height: 680px;
+}
+
+.video-container {
+    z-index: 2;
+    overflow: hidden;
+    height: 680px;
+    width: 100%;
+    background-color: #000;
+}
+
+.video-js source {
+    width: 100%;
+}
+
+/* --------------------------------------- single video ----------------------------------------- */

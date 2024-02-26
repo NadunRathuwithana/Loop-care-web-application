@@ -24,7 +24,7 @@
                     <div class="card">
                         <h5 class="card-header">Questions and Answers</h5>
                         <div class="table-responsive text-nowrap overflow-visible">
-                            <table class="table">
+                            <table class="table" id="table">
                                 <thead>
                                     <tr>
                                         <th>Question</th>
@@ -35,7 +35,7 @@
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
-                                    <tr>
+                                    {{-- <tr>
                                         <td>
                                             <strong>What is your pain?</strong>
                                         </td>
@@ -66,7 +66,7 @@
                                                 </div>
                                             </div>
                                         </td>
-                                    </tr>
+                                    </tr> --}}
                                 </tbody>
                             </table>
                         </div>
@@ -79,3 +79,52 @@
     @include('admin.signup_management.patials.create-modal')
     @include('admin.signup_management.patials.edit-modal')
 @endsection
+@section('scripts')
+    <script>
+         $(function() {
+        var table = $('#table').DataTable({
+            processing: true,
+            serverSide: true,
+            destroy: true,
+            ajax: "{{ route('questions-setup.get-questions') }}",
+            order: [ 1, 'asc' ],
+            columns: [
+                {
+                    data: 'question',
+                    name: 'question'
+                },
+                {
+                    data: 'answers',
+                    name: 'answers'
+                },
+                {
+                    data: 'action',
+                    name: 'action'
+                },
+            ]
+        });
+
+        });
+
+        //delete farm
+        function submitDeleteForm(form) {
+        new Swal({
+                title: "Are you sure?",
+                text: "to delete this vessel list?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonClass: "btn-danger",
+                confirmButtonText: "Yes Delete",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+            })
+            .then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            })
+        return false;
+        }
+    </script>
+@endsection
+

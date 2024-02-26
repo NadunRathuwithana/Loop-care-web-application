@@ -101,6 +101,36 @@ var swiper = new Swiper(".categoryCardSwiper", {
     },
   });
 
+  // relatedVideoCardSwiper
+var swiper = new Swiper(".relatedVideoCardSwiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+    freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        576: {
+            slidesPerView: 1.8,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+        992: {
+            slidesPerView: 3.5,
+            spaceBetween: 10,
+        },
+        1280: {
+            slidesPerView: 4,
+            spaceBetween: 10,
+        },
+    },
+  });
+
   // slider
 var swiper = new Swiper(".sliderSwiper", {
     slidesPerView: 1.5,

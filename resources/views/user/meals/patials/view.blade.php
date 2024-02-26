@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="mt-3">
-                    {{--  description  --}}
+                    {{--  Instructions  --}}
                     <h3 class="text-main">Instructions</h3>
                     <div>
                         <ol class="text-muted">

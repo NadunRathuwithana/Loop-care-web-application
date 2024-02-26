@@ -3,20 +3,103 @@
 @section('content')
     @include('layouts.userNav')
 
-    <div class="container-fluid px-md-5 hero-slider mt-3">
-        <div class="swiper heroSwiper">
-            <div class="swiper-wrapper hero-wrapper">
-                <div class="swiper-slide swiper-hero-img">
-                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-1.jpg">
+    {{--  Challenges  --}}
+    <div class="slider-swiper-container hero-slider mt-3 mt-md-5">
+
+        {{--  Single slider  --}}
+        <div class="container">
+            <h4 class="sub-title">Categories</h4>
+            <div class="swiper boxCardSwiper pt-0">
+                <div class="swiper-wrapper py-0 py-md-2">
+
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="image-container">
+                                    <img class="card-img-top" src="assets/img/challenge/1.jpg" alt="Card image cap">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h2>Pain Relief</h2>
+                                    <small class="text-secondary">6 Workouts</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="image-container">
+                                    <img class="card-img-top" src="assets/img/challenge/2.jpg" alt="Card image cap">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h2>Waight Gain</h2>
+                                    <small class="text-secondary">10 Workouts</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="image-container">
+                                    <img class="card-img-top" src="assets/img/challenge/3.jpg" alt="Card image cap">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h2>Waight Loss</h2>
+                                    <small class="text-secondary">10 Workouts</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="image-container">
+                                    <img class="card-img-top" src="assets/img/challenge/4.jpg" alt="Card image cap">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h2>Stretching</h2>
+                                    <small class="text-secondary">10 Workouts</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="image-container">
+                                    <img class="card-img-top" src="assets/img/challenge/5.jpg" alt="Card image cap">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h2>Warrior Workouts</h2>
+                                    <small class="text-secondary">10 Workouts</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <div class="card">
+                                <div class="image-container">
+                                    <img class="card-img-top" src="assets/img/challenge/6.jpg" alt="Card image cap">
+                                    <div class="gradient-overlay"></div>
+                                </div>
+                                <div class="text-overlay">
+                                    <h2>Water Warrior</h2>
+                                    <small class="text-secondary">10 Workouts</small>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="swiper-slide swiper-hero-img">
-                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-2.jpg">
-                </div>
-                <div class="swiper-slide swiper-hero-img">
-                    <img class="d-block w-100 hero-img" src="assets/img/banners/banner-3.jpg">
-                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
     </div>
 

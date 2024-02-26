@@ -49,9 +49,48 @@ $(document).ready(function () {
     });
 });
 
-
-
-$(document).ready(function() {
-    $('.multiple').select2();
+$(document).ready(function () {
+    $(".multiple").select2();
 });
 
+// image upload
+window.onload = function () {
+    var imageUploaders = document.querySelectorAll(".image-upload");
+    imageUploaders.forEach(function (uploader) {
+        uploader.addEventListener("change", previewImage);
+    });
+};
+
+function previewImage(event) {
+    var reader = new FileReader();
+    reader.onload = function () {
+        var output = event.target.parentNode.querySelector(".image-preview");
+        output.src = reader.result;
+        output.style.display = "block";
+    };
+    reader.readAsDataURL(event.target.files[0]);
+}
+
+// validations
+(function () {
+    "use strict";
+
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.querySelectorAll(".needs-validation");
+
+    // Loop over them and prevent submission
+    Array.prototype.slice.call(forms).forEach(function (form) {
+        form.addEventListener(
+            "submit",
+            function (event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+
+                form.classList.add("was-validated");
+            },
+            false
+        );
+    });
+})();

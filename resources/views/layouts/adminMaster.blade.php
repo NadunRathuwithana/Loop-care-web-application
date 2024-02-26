@@ -13,7 +13,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/admin/assets/img/favicon/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     {{-- STYLE CSS --}}
     @include('layouts.adminStyle')
@@ -28,6 +28,7 @@
 
     {{-- JAVA SCRIPT --}}
     @include('layouts.adminJs')
+    @include('layouts.notification_alerts')
 
 </body>
 

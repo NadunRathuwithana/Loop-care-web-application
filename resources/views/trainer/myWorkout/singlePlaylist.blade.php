@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-    @include('layouts.userNav')
+    @include('layouts.trainerNav')
 
     <div class="container-fluid px-md-5 hero-slider mt-3">
 

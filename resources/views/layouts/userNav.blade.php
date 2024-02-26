@@ -76,10 +76,50 @@
 
 
         <!-- Right Side Profile Icon -->
-        <div class="profile-icon">
-            <a href="{{ url('goals') }}">
-                <img src="{{ url('assets/img/user.png') }}" alt="Profile Icon">
-            </a>
+        <div class="dropdown">
+            <button class="btn btn-warning avatar p-0 bg-transparent border-0 shadow-none" type="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}" alt="Profile Icon">
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li>
+                    <a class="dropdown-item" href="#">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 me-3">
+                                <div class="avatar">
+                                    <!-- user image -->
+                                    <img src="https://mighty.tools/mockmind-api/content/human/57.jpg" alt
+                                        class="rounded-circle" />
+                                </div>
+                            </div>
+                            <div class="flex-grow-1">
+                                <!-- user name -->
+                                <span class="fw-semibold d-block">John Doe</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <div class="dropdown-divider"></div>
+                </li>
+                <li>
+                    <a class="dropdown-item" href="{{ url('profile') }}">
+                        <i class="fa-regular fa-user me-2"></i>
+                        <!-- my profile -->
+                        <span class="align-middle">My Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <div class="dropdown-divider"></div>
+                </li>
+                <li>
+                    <!-- logout -->
+                    <a class="dropdown-item" href="auth-login-basic.html">
+                        <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                        <span class="align-middle">Log Out</span>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>

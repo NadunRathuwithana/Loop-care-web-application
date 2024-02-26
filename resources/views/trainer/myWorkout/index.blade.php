@@ -1,13 +1,16 @@
 @extends('layouts.master')
 
 @section('content')
-    @include('layouts.userNav')
+    @include('layouts.trainerNav')
+    @include('trainer.myWorkout.patials.create')
 
     {{--  Add workout  --}}
     <div class="container px-md-5 hero-slider mt-3">
         <div class="d-flex gap-2 justify-content-end ">
-            <button type="button" class="btn btn-main-sq btn-ui px-4"><i
-                    class="fa-solid fa-plus me-2"></i> Create Workout</button>
+            <button type="button" class="btn btn-main-sq btn-ui px-4" data-bs-target="#newWorkout" data-bs-toggle="modal"
+                data-bs-dismiss="modal">
+                <i class="fa-solid fa-plus me-2"></i> Create
+                Workout</button>
         </div>
 
         {{--  season 1 --}}
@@ -96,4 +99,3 @@
         </div>
     </div>
 @endsection
-

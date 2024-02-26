@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('customerId')->nullable();
             $table->string('questionId')->nullable();
             $table->string('answerId')->nullable();
-            $table->boolean('isActive')->nullable()->default(1);
+         $table->boolean('isActive')->nullable()   ->default(1);
             $table->timestamps();
         });
     }

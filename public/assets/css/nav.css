@@ -38,11 +38,8 @@
     color: #001C33; /* Light gray on hover */
 }
 
-.profile-icon {
+.avatar img{
     margin-left: auto;
-}
-
-.profile-icon img {
-    height: 40px; /* Adjust the height as needed */
+    height: 40px;
     width: auto;
 }

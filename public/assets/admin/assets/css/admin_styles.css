@@ -33,3 +33,11 @@
 .btn-secondary-2:hover {
     background-color: #ececec;
 }
+
+.image-preview {
+    display: none;
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}

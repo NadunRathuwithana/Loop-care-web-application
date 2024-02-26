@@ -7,31 +7,33 @@
                 <h5 class="modal-title" id="exampleModalLabel1">Add User</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form>
+            <form action="" class="needs-validation" novalidate>
                 <div class="modal-body">
 
                     <div class="row">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">First Name</label>
-                            <input type="text" class="form-control" placeholder="John" />
+                            <input type="text" class="form-control" placeholder="John" required />
+                            <div class="invalid-feedback">Please enter a first name.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Last Name</label>
-                            <input type="text" class="form-control" placeholder="Doe" />
+                            <input type="text" class="form-control" placeholder="Doe" required />
+                            <div class="invalid-feedback">Please enter a last name.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-email">Email</label>
-                            <div class="input-group input-group-merge">
-                                <input type="text" class="form-control" placeholder="john.doe@loopcare.com" />
-                            </div>
+                            <input type="email" class="form-control" placeholder="john.doe@loopcare.com" required />
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-role">Role</label>
                             <div class="input-group input-group-merge">
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" aria-label="Default select example" required>
                                     <option value="Admin" selected>Admin</option>
                                     <option value="Medical Specialist">Medical Specialist</option>
                                 </select>
+                                <div class="invalid-feedback">Please select a role.</div>
                             </div>
                         </div>
                     </div>
@@ -41,7 +43,7 @@
                     <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                         Close
                     </button>
-                    <button type="button" class="btn btn-primary">Add User</button>
+                    <button type="submit" class="btn btn-primary">Add User</button>
                 </div>
             </form>
         </div>
