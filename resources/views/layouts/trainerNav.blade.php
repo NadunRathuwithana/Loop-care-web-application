@@ -15,22 +15,28 @@
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/trainer') }}">Home</a>
+                    <a class="nav-link {{ Request::is('trainer') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('/trainer') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Appointments</a>
+                    <a class="nav-link {{ Request::is('trainer/appointments') ? 'active' : '' }}"
+                        href="{{ url('/') }}" href="{{ url('/trainer/appointments') }}">Appointments</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/trainer/workouts') }}">My Workouts</a>
+                    <a class="nav-link {{ Request::is('trainer/workouts') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('/trainer/workouts') }}">My Workouts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Availability</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('goals') }}">Availability</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Live sessions</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('goals') }}">Live sessions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Feedback</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('goals') }}">Feedback</a>
                 </li>
 
             </ul>
@@ -41,7 +47,8 @@
         <div class="dropdown">
             <button class="btn btn-warning avatar p-0 bg-transparent border-0 shadow-none" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}" alt="Profile Icon">
+                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}"
+                    alt="Profile Icon">
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
                 <li>

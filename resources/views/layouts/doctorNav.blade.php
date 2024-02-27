@@ -14,16 +14,20 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Appointments</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('goals') }}">Appointments</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Availability</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('goals') }}">Availability</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Feedback</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                        href="{{ url('goals') }}">Feedback</a>
                 </li>
             </ul>
         </div>
@@ -33,7 +37,8 @@
         <div class="dropdown">
             <button class="btn btn-warning avatar p-0 bg-transparent border-0 shadow-none" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}" alt="Profile Icon">
+                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}"
+                    alt="Profile Icon">
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
                 <li>

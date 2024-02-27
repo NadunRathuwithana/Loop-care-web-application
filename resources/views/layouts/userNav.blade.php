@@ -15,62 +15,28 @@
             <ul class="navbar-nav mx-auto">
                 {{--  ///////////////---patient---//////////////////  --}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('workouts') }}">Workouts</a>
+                    <a class="nav-link {{ Request::is('workouts') ? 'active' : '' }}"
+                        href="{{ url('workouts') }}">Workouts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('appointment') }}">Meet Doctor</a>
+                    <a class="nav-link {{ Request::is('appointment') ? 'active' : '' }}"
+                        href="{{ url('appointment') }}">Meet Doctor</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('appointment') }}">Meet Trainer</a>
+                    <a class="nav-link {{ Request::is('appointment') ? 'active' : '' }}"
+                        href="{{ url('appointment') }}">Meet Trainer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('meals') }}">Meals</a>
+                    <a class="nav-link {{ Request::is('meals') ? 'active' : '' }}" href="{{ url('meals') }}">Meals</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Goals</a>
+                    <a class="nav-link {{ Request::is('goals') ? 'active' : '' }}"
+                        href="{{ url('goals') }}">Goals</a>
                 </li>
                 {{--  ///////////////---patient---//////////////////  --}}
-
-
-                {{--  ///////////////---trainer---//////////////////  --}}
-                {{--  <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Appointments</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">My Workouts</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Availability</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Live sessions</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Feedback</a>
-                </li>  --}}
-                {{--  ///////////////---trainer---//////////////////  --}}
-
-
-                {{--  ///////////////---doctor---//////////////////  --}}
-                {{--  <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Appointments</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Availability</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('goals') }}">Feedback</a>
-                </li>  --}}
-                {{--  ///////////////---docctor---//////////////////  --}}
             </ul>
         </div>
 
@@ -79,7 +45,8 @@
         <div class="dropdown">
             <button class="btn btn-warning avatar p-0 bg-transparent border-0 shadow-none" type="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}" alt="Profile Icon">
+                <img class="rounded-circle" src="{{ url('https://mighty.tools/mockmind-api/content/human/57.jpg') }}"
+                    alt="Profile Icon">
             </button>
             <ul class="dropdown-menu dropdown-menu-end">
                 <li>

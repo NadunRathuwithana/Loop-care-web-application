@@ -333,6 +333,15 @@ class WeblinkController extends Controller
         }
     }
 
+    public function TrainerAppointments()
+    {
+        try {
+            return view('trainer/appointments/index');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
     // ---------------------------------------Trainer -----------------------------------------------------------------------------
 
 }

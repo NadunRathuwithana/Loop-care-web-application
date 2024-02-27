@@ -35,6 +35,7 @@ Route::get('profile', [WeblinkController::class, 'Profile']);
 // ////////////////----Trainer----/////////////////////
 Route::get('/trainer', [WeblinkController::class, 'TrainerHome']);
 Route::get('/trainer/workouts', [WeblinkController::class, 'TrainerWorkouts']);
+Route::get('/trainer/appointments', [WeblinkController::class, 'TrainerAppointments']);
 
 
 // ////////////////----Admin----/////////////////////

@@ -162,4 +162,34 @@ var swiper = new Swiper(".sliderSwiper", {
   });
 
 
+  // categoryCardSwiper
+var swiper = new Swiper(".appointmentCardSwiper", {
+    slidesPerView: 1.5,
+    spaceBetween: 10,
+    freeMode: true,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      breakpoints: {
+        576: {
+            slidesPerView: 1.8,
+            spaceBetween: 10,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 10,
+        },
+        992: {
+            slidesPerView: 2.5,
+            spaceBetween: 10,
+        },
+        1280: {
+            slidesPerView: 3,
+            spaceBetween: 10,
+        },
+    },
+  });
+
 

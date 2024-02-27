@@ -1,9 +1,9 @@
 :root {
-    --blue-primary: #001C33;
+    --blue-primary: #001c33;
     --blue-secondary: #004371;
-    --blue-highlight: #74EADA;
-    --blue-light: #F2F5F8;
-    --gray: #D1D1D1;
+    --blue-highlight: #74eada;
+    --blue-light: #f2f5f8;
+    --gray: #d1d1d1;
 }
 
 .navbar {
@@ -35,10 +35,15 @@
 }
 
 .navbar-nav .nav-link:hover {
-    color: #001C33; /* Light gray on hover */
+    color: #001c33; /* Light gray on hover */
 }
 
-.avatar img{
+.navbar-nav .active {
+    color: #001c33;
+    font-weight: bold;
+}
+
+.avatar img {
     margin-left: auto;
     height: 40px;
     width: auto;
