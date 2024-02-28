@@ -11,17 +11,17 @@
                 <h1 class="text-white text-start mt-3">Empowering your journey</br>towards wellness.</h1>
                 <div class="mt-3">
                     <a href="{{ url('register') }}" class="btn btn-white-outline py-3 w-100 mt-3 me-2 fw-bold">
-                        <h5 class="m-0">
+                        <h5 class="m-0 text-white">
                             I'm a Patient
                         </h5>
                     </a>
                     <a href="{{ url('register_doctor') }}" class="btn btn-white-outline py-3 w-100 mt-2 me-2 fw-bold">
-                        <h5 class="m-0">
+                        <h5 class="m-0 text-white">
                             I'm a Doctor
                         </h5>
                     </a>
                     <a href="{{ url('register_trainer') }}" class="btn btn-white-outline py-3 w-100 mt-2 me-2 fw-bold">
-                        <h5 class="m-0">
+                        <h5 class="m-0 text-white">
                             I'm a Trainer
                         </h5>
                     </a>

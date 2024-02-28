@@ -7,17 +7,13 @@ use App\Http\Controllers\WeblinkController;
 use App\Http\Controllers\Admin\QuetionSetupController;
 use App\Http\Controllers\Admin\GoalManagementController;
 use App\Http\Controllers\Admin\MealManagementController;
-
-// //////////////////---common---///////////////
-Route::get('login', [WeblinkController::class, 'Login']);
-Route::get('regStart', [WeblinkController::class, 'RegStart']);
-Route::get('register', [WeblinkController::class, 'Register']);
-Route::get('register_doctor', [WeblinkController::class, 'Register_Doctor']);
-Route::get('register_trainer', [WeblinkController::class, 'Register_Trainer']);
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 Route::get('404', [WeblinkController::class, 'NotFound']);
 Route::get('maintenance', [WeblinkController::class, 'Maintenance']);
 
+Route::get('registerQuestion', [WeblinkController::class, 'RegisterQuestion']);
 
 // ////////////////----Patient----/////////////////////
 Route::get('', [WeblinkController::class, 'Home']);
@@ -39,9 +35,9 @@ Route::get('/trainer/appointments', [WeblinkController::class, 'TrainerAppointme
 
 
 // ////////////////----Admin----/////////////////////
-Route::get('admin', [WeblinkController::class, 'Dashboard']);
+Route::get('admin', [WeblinkController::class, 'AdminLogin']);
 
-Route::get('admin/login', [WeblinkController::class, 'AdminLogin']);
+Route::get('dashboard', [WeblinkController::class, 'Dashboard']);
 
 Route::get('user_management', [WeblinkController::class, 'Users']);
 Route::get('questions_setup', [WeblinkController::class, 'Questions']);
@@ -87,4 +83,16 @@ Route::get('report_management', [WeblinkController::class, 'Report']);
 
 
 
+// //////////////////---User---///////////////
+Route::get('login', [WeblinkController::class, 'Login']);
+Route::get('regStart', [WeblinkController::class, 'RegStart']);
+Route::get('register', [WeblinkController::class, 'Register']);
+Route::get('register_doctor', [WeblinkController::class, 'Register_Doctor']);
+Route::get('register_trainer', [WeblinkController::class, 'Register_Trainer']);
 
+Route::post('patientRegister', [RegisterController::class, 'PatientRegister']);
+Route::post('doctorRegister', [RegisterController::class, 'DoctorRegister']);
+Route::post('trainerRegister', [RegisterController::class, 'TrainerRegister']);
+
+
+Route::post('userLogin', [LoginController::class, 'UserLogin']);

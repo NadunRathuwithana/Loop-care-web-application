@@ -27,7 +27,8 @@
                                             <p class="text-secondary">Doctor Registration</p>
                                         </div>
 
-                                        <form action="">
+                                        <form action="{{url('doctorRegister')}}" method="post" enctype="multipart/form-data">
+                                            {{csrf_field()}}
                                             <div class="row d-flex justify-content-center align-items-top"
                                                 style="height: 400px;">
                                                 <div class="col-12">
@@ -45,19 +46,29 @@
                                                             <p class="text-main">About you</p>
                                                             <div class="form-group mb-2">
                                                                 <input type="text" class="form-control input py-2 px-4"
-                                                                    id="first_name" name="first_name"
+                                                                    id="fName" name="fName"
                                                                     placeholder="First Name">
                                                             </div>
 
                                                             <div class="form-group mb-2">
                                                                 <input type="text" class="form-control input py-2 px-4"
-                                                                    id="last_name" name="last_name" placeholder="Last Name">
+                                                                    id="lName" name="lName" placeholder="Last Name">
                                                             </div>
 
                                                             <div class="form-group mb-2">
                                                                 <input type="email" class="form-control input py-2 px-4"
                                                                     id="email" name="email"
                                                                     aria-describedby="emailHelp" placeholder="Email">
+                                                            </div>
+                                                            <div class="form-group mb-2">
+                                                                <input type="password" class="form-control input py-2 px-4"
+                                                                    id="password" name="password" placeholder="Password">
+                                                            </div>
+
+                                                            <div class="form-group mb-2">
+                                                                <input type="password" class="form-control input py-2 px-4"
+                                                                    id="confirm-password" name="confirm-password"
+                                                                    placeholder="Confirm password">
                                                             </div>
 
                                                         </div>
@@ -72,7 +83,7 @@
                                                             <div class="checkbox-wrapper col-6 p-0 pe-1">
                                                                 <label class="checkbox-wrapper">
                                                                     <input class="checkbox-input radio-input" type="radio"
-                                                                        name="gender" value="male" checked>
+                                                                        name="sex" value="male" checked>
                                                                     <span class="checkbox-tile">
                                                                         <span class="checkbox-label">Male</span>
                                                                     </span>
@@ -81,7 +92,7 @@
                                                             <div class="checkbox-wrapper col-6 p-0 ps-1">
                                                                 <label class="checkbox-wrapper">
                                                                     <input class="checkbox-input radio-input" type="radio"
-                                                                        name="gender" value="female">
+                                                                        name="sex" value="female">
                                                                     <span class="checkbox-tile">
                                                                         <span class="checkbox-label">Female</span>
                                                                     </span>
@@ -98,14 +109,14 @@
                                                         {{--  Hospital  --}}
                                                         <div class="form-group mb-2">
                                                             <input type="text" class="form-control input py-2 px-4"
-                                                                id="hospital" name="hospital"
+                                                                id="workHospital" name="workHospital"
                                                                 placeholder="Working Hospital">
                                                         </div>
 
                                                         {{--  experience  --}}
                                                         <div class="form-group mb-2">
                                                             <input type="text" class="form-control input py-2 px-4"
-                                                                id="experience" name="experience"
+                                                                id="workExperience" name="workExperience"
                                                                 placeholder="Working Experience (ex: 5 Years)">
                                                         </div>
 
@@ -120,7 +131,7 @@
                                                         {{--  slmc reg  --}}
                                                         <div class="form-group mb-2">
                                                             <input type="text" class="form-control input py-2 px-4"
-                                                                id="slmc" name="slmc"
+                                                                id="docRegNo" name="docRegNo"
                                                                 placeholder="Sri Lanka Medical Council (SLMC) Registration Number">
                                                         </div>
 
@@ -129,7 +140,7 @@
                                                             <div class="file-upload-container">
                                                                 <input type="file"
                                                                     class="form-control input file-input"
-                                                                    id="medical_licence"
+                                                                    id="file" name="file"
                                                                     onchange="displaySelectedFileName(this)" />
                                                                 <label for="medical_licence" class="custom-file-upload">
                                                                     <span class="selected-file-name">Upload Medical
@@ -147,7 +158,7 @@
                                                         <p>Your Speciality?</p>
                                                         <div class="checkbox-wrapper p-0 pe-1 mb-2">
                                                             <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
+                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Orthopedic">
                                                                 <span class="checkbox-tile">
                                                                     <span class="checkbox-label">Orthopedic</span>
                                                                 </span>
@@ -155,7 +166,8 @@
                                                         </div>
                                                         <div class="checkbox-wrapper p-0 pe-1 mb-2">
                                                             <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
+                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Physical Medicine and
+                                                                Rehabilitation (PM&R)">
                                                                 <span class="checkbox-tile">
                                                                     <span class="checkbox-label">Physical Medicine and
                                                                         Rehabilitation (PM&R)</span>
@@ -164,7 +176,8 @@
                                                         </div>
                                                         <div class="checkbox-wrapper p-0 pe-1 mb-2">
                                                             <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
+                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Physical Therapist
+                                                                (PT)">
                                                                 <span class="checkbox-tile">
                                                                     <span class="checkbox-label">Physical Therapist
                                                                         (PT)</span>
@@ -173,7 +186,7 @@
                                                         </div>
                                                         <div class="checkbox-wrapper p-0 pe-1 mb-2">
                                                             <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
+                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Chiropractor">
                                                                 <span class="checkbox-tile">
                                                                     <span class="checkbox-label">Chiropractor</span>
                                                                 </span>
@@ -181,7 +194,7 @@
                                                         </div>
                                                         <div class="checkbox-wrapper p-0 pe-1 mb-2">
                                                             <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
+                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Nutritionist">
                                                                 <span class="checkbox-tile">
                                                                     <span class="checkbox-label">Nutritionist</span>
                                                                 </span>
@@ -189,7 +202,7 @@
                                                         </div>
                                                         <div class="checkbox-wrapper p-0 pe-1 mb-2">
                                                             <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
+                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Rheumatologist">
                                                                 <span class="checkbox-tile">
                                                                     <span class="checkbox-label">Rheumatologist</span>
                                                                 </span>

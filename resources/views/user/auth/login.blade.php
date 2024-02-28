@@ -33,38 +33,35 @@
                                             </div>
                                         @endif
 
+
+                                        <div class="form-group pt-4 mb-5 text-center">
+                                            <h2 class="fw-bold mb-5">Welcome to Loop Care</h2>
+                                        </div>
+
                                         @if (session()->has('error'))
-                                            <div class="col-md-4">
-                                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                                    {{ session()->get('error') }}
-                                                    <button type="button" class="btn-close" data-bs-dismiss="alert"
-                                                        aria-label="Close"></button>
-                                                </div>
-                                            </div>hjj
+                                            <div class="alert alert-danger alert-dismissible fade show mb-3 border border-danger"
+                                                role="alert">
+                                                <small> {{ session()->get('error') }}</small>
+                                            </div>
                                         @endif
 
 
-
-
-                                        <form action="{{ url('signIn') }}" method="post" enctype="multipart/form-data">
+                                        <form action="{{ url('userLogin') }}" method="post" enctype="multipart/form-data">
                                             {{ csrf_field() }}
 
-                                            <div class="form-group pt-3 mb-5 text-center">
-                                                <h2 class="fw-bold">Welcome to Loop Care</h2>
-                                            </div>
 
-                                            <div class="form-group pt-5">
+                                            <div class="form-group mb-3">
                                                 <input type="email" class="form-control input py-2 px-4" id="email"
                                                     name="email" aria-describedby="emailHelp" placeholder="Email"
                                                     required>
                                             </div>
 
-                                            <div class="form-group pt-3">
+                                            <div class="form-group mb-3">
                                                 <input type="password" class="form-control input py-2 px-4" id="password"
                                                     name="password" placeholder="Password" required>
                                             </div>
 
-                                            <div class="pt-3 mb-4">
+                                            <div class="mb-4">
                                                 <button class="btn btn-main btn-block w-100 py-2" type="submit">
                                                     Login</button>
                                             </div>

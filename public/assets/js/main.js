@@ -103,3 +103,12 @@ function previewImage(event) {
     };
     reader.readAsDataURL(event.target.files[0]);
 }
+
+
+// loader js
+$(document).ready(function() {
+    setTimeout(function() {
+        $('.loader').hide();
+        $('.questionForm').show();
+    }, 6000);
+});

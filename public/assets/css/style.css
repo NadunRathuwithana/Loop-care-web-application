@@ -12,10 +12,17 @@ body {
     font-family: "SF Pro Display", sans-serif;
 }
 
-.bg-blue{
-    background-color: var(--blue-secondary);
+small {
+    font-size: small;
 }
 
+p, a {
+    font-size: medium;
+}
+
+.bg-blue {
+    background-color: var(--blue-secondary);
+}
 
 .btn-main {
     border-radius: 50px !important;
@@ -170,8 +177,73 @@ body {
     object-fit: cover;
 }
 
-.rounded-xl{
+.rounded-xl {
     border-radius: 10px;
+}
+
+/* spinner */
+.spinner {
+    width: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.spinner .dot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.spinner .dot::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner .dot {
+    animation: spin 2s infinite;
+}
+
+.spinner .dot:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+.spinner .dot:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+.spinner .dot:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+.spinner .dot:nth-child(5) {
+    animation-delay: 400ms;
+}
+
+/* blink text */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blink-text {
+    animation: blink 3s infinite;
 }
 
 /* ---------------------------------------login----------------------------------------- */
@@ -638,7 +710,6 @@ body {
     left: 0;
     background: linear-gradient(to top, white, transparent);
     z-index: 1;
-
 }
 
 .workout-name {
@@ -662,23 +733,21 @@ body {
 
 /* --------------------------------------- Workout ----------------------------------------- */
 
-
-
 /* --------------------------------------- meal ----------------------------------------- */
-.meal-card{
+.meal-card {
     height: 300px !important;
     width: 100% !important;
     object-fit: cover;
 }
 
-.view-img{
+.view-img {
     width: 300px;
     height: 200px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-.nutrition-table{
+.nutrition-table {
     border-radius: 10px !important;
 }
 

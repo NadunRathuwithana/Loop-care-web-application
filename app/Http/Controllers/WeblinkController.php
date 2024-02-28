@@ -165,6 +165,16 @@ class WeblinkController extends Controller
         }
     }
 
+    public function RegisterQuestion()
+    {
+        try {
+            return view('user/auth/registerQuestion');
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+    
+
     ///////////////////////////////////////////////////////////// user/////////////////////////////////////////////////////
 
 
