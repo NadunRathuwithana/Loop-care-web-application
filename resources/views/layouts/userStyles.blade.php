@@ -9,6 +9,12 @@
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+<link rel="stylesheet" href="{{ url('assets/admin/assets/vendor/css/core.css') }}"
+    class="template-customizer-core-css" />
+<link rel="stylesheet" href="{{ url('assets/admin/assets/vendor/css/theme-default.css') }}"
+    class="template-customizer-theme-css" />
+<link rel="stylesheet" href="{{ url('assets/admin/assets/css/demo.css') }}" />
+
 {{--  Swiper JS  --}}
 <link rel="stylesheet" href="{{ url('https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css') }}" />
 
@@ -18,4 +24,3 @@
 <link href="{{ url('assets/css/style.css') }}" rel="stylesheet">
 <link href="{{ url('assets/css/nav.css') }}" rel="stylesheet">
 <link href="{{ url('assets/css/player.css') }}" rel="stylesheet">
-

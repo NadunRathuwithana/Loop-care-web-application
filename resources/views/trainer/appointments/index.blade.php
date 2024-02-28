@@ -11,6 +11,39 @@
     {{--  Pain Relief  --}}
     <div class="slider-swiper-container mt-2 mt-md-5">
 
+        <div class="container mb-5">
+            <div class="row">
+                <div class="col-8">
+                    <div class="card rounded-xl p-2">
+                        <div class="d-flex gap-3 align-items-center">
+                            <img class="rounded" src="https://mighty.tools/mockmind-api/content/human/78.jpg" alt=""
+                                style="width: 300px; height: 300px; object-fit:cover">
+                            <div>
+                                <h4 class="text-dark fw-bold">Tharindu Silva</h4>
+                                <p class="text-muted mb-5"><span>28 years old</span> | <span>Male</span></p>
+                                <p class="m-0"><span class="h4 text-dark fw-bold">6.00PM</span> <span
+                                        class="text-muted">5
+                                        December</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card rounded-xl p-2">
+                        <div class="d-flex gap-3 align-items-center">
+                            <div style=" height: 300px;">
+                                <h4 class="text-dark fw-bold">Tharindu Silva</h4>
+                                <p class="text-muted mb-5"><span>28 years old</span> | <span>Male</span></p>
+                                <p class="m-0"><span class="h4 text-dark fw-bold">6.00PM</span> <span
+                                        class="text-muted">5
+                                        December</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         {{--  Single slider  --}}
         <div class="container">
             <h4 class="sub-title">Upcoming Appointments</h4>

@@ -44,9 +44,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-end modal-footer pb-0">
-                        <button type="button" class="btn btn-gray-sq btn-ui"data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-main-sq btn-ui">Save</button>
+                    <div class="d-flex justify-content-end modal-footer pb-0 px-0">
+                        <button type="button" class="btn btn-outline-secondary"data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
                     </div>
                 </form>
             </div>

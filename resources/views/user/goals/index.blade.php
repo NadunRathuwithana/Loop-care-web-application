@@ -14,17 +14,6 @@
                 <i class="fa-solid fa-plus me-2"></i> Add Activity</button>
         </div>
 
-
-
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="activityCanvas" aria-labelledby="offcanvasRightLabel">
-            <div class="offcanvas-header">
-                <h5 id="offcanvasRightLabel">Add Activity</h5>
-                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-                ...
-            </div>
-        </div>
         {{--  meals for you  --}}
         <div class="slider-swiper-container mt-2 mt-md-5">
             <div class="container pb-3 mb-4 border-bottom">
@@ -42,8 +31,9 @@
                                         <div class="gradient-overlay"></div>
                                     </div>
                                     <div class="text-overlay image-card-sq">
-                                        <h2>Running Goals</h2>
-                                        <small class="text-warning">5 Goals</small>
+                                        <h2 class="text-white">Running Goals</h2>
+                                        <small class="text-warning">
+                                            5 Goals</small>
                                     </div>
                                 </div>
                             </a>
@@ -59,7 +49,7 @@
                                         <div class="gradient-overlay"></div>
                                     </div>
                                     <div class="text-overlay image-card-sq">
-                                        <h2>Walking Goals</h2>
+                                        <h2 class="text-white">Walking Goals</h2>
                                         <small class="text-warning">5 Goals</small>
                                     </div>
                                 </div>
@@ -82,7 +72,7 @@
                 <div class="swiper categoryCardSwiper pt-0">
                     <div class="swiper-wrapper py-0 py-md-2">
 
-                        <div class="swiper-slide">
+                        <div class="swiper-slide bg-transparent">
                             <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
                                 data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
@@ -102,8 +92,9 @@
                             </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -112,14 +103,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -128,14 +123,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -144,10 +143,13 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
                     </div>
@@ -162,12 +164,13 @@
 
             {{--  Single slider  --}}
             <div class="container" id="walking">
-                <h4 class="sub-title" >Lunch</h4>
+                <h4 class="sub-title">Lunch</h4>
                 <div class="swiper categoryCardSwiper pt-0">
                     <div class="swiper-wrapper py-0 py-md-2">
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -176,14 +179,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -192,14 +199,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -208,14 +219,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -224,10 +239,13 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
                     </div>
@@ -246,8 +264,9 @@
                 <div class="swiper categoryCardSwiper pt-0">
                     <div class="swiper-wrapper py-0 py-md-2">
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -256,14 +275,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -272,14 +295,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -288,14 +315,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -304,10 +335,13 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
                     </div>
@@ -326,8 +360,9 @@
                 <div class="swiper categoryCardSwiper pt-0">
                     <div class="swiper-wrapper py-0 py-md-2">
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -336,14 +371,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -352,14 +391,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -368,14 +411,18 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
-                        <div class="swiper-slide">
-                            <a href="" class="text-decoration-none">
+                        <div class="swiper-slide bg-transparent">
+                            <button type="button" class="bg-transparent border-0 p-0" data-bs-target="#viewGoal"
+                                data-bs-toggle="modal" data-bs-dismiss="modal">
                                 <div class="card mb-2">
                                     <div class="image-container">
                                         <img class="card-img-top meal-card"
@@ -384,10 +431,13 @@
                                     </div>
                                 </div>
                                 <div>
-                                    <h4 class="text-main m-0">Chopped Tuna Salad</h4>
-                                    <small class="text-secondary">Weight Gain</small>
+                                    <h4 class="text-main text-start m-0">Sprinter Starter</h4>
+                                    <div class="d-flex justify-content-between">
+                                        <small class="text-secondary">Beginner</small>
+                                        <small class="text-secondary">40% Completed</small>
+                                    </div>
                                 </div>
-                            </a>
+                            </button>
                         </div>
 
                     </div>

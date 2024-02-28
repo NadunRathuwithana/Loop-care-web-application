@@ -157,7 +157,8 @@
                                                             <label class="checkbox-wrapper">
                                                                 <input class="checkbox-input" type="checkbox">
                                                                 <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Physical Medicine and Rehabilitation (PM&R)</span>
+                                                                    <span class="checkbox-label">Physical Medicine and
+                                                                        Rehabilitation (PM&R)</span>
                                                                 </span>
                                                             </label>
                                                         </div>
@@ -165,7 +166,8 @@
                                                             <label class="checkbox-wrapper">
                                                                 <input class="checkbox-input" type="checkbox">
                                                                 <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Physical Therapist (PT)</span>
+                                                                    <span class="checkbox-label">Physical Therapist
+                                                                        (PT)</span>
                                                                 </span>
                                                             </label>
                                                         </div>
@@ -204,6 +206,8 @@
                                                             onclick="nextPrev(-1)" style="width:160px;">Previous</button>
                                                         <button type="button" class="btn btn-main p-2" id="nextBtn"
                                                             onclick="nextPrev(1)" style="width:160px;">Next</button>
+                                                        <button type="submit" class="btn btn-main p-2" id="submitBtn"
+                                                            style="width:160px;">Submit</button>
                                                     </div>
                                                 </div>
                                             </div>

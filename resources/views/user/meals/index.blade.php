@@ -22,7 +22,7 @@
                                         <div class="gradient-overlay"></div>
                                     </div>
                                     <div class="text-overlay image-card-sq">
-                                        <h2>Grilled Salmon with Asparagus</h2>
+                                        <h2 class="text-white">Grilled Salmon with Asparagus</h2>
                                         <small class="text-warning">Breakfast</small>
                                     </div>
                                 </div>

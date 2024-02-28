@@ -15,27 +15,27 @@
             <ul class="navbar-nav mx-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('trainer') ? 'active' : '' }}" href="{{ url('/') }}"
+                    <a class="nav-link {{ Request::is('trainer') ? 'active' : '' }}"
                         href="{{ url('/trainer') }}">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ Request::is('trainer/appointments') ? 'active' : '' }}"
-                        href="{{ url('/') }}" href="{{ url('/trainer/appointments') }}">Appointments</a>
+                        href="{{ url('/trainer/appointments') }}">Appointments</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('trainer/workouts') ? 'active' : '' }}" href="{{ url('/') }}"
+                    <a class="nav-link {{ Request::is('trainer/workouts') ? 'active' : '' }}"
                         href="{{ url('/trainer/workouts') }}">My Workouts</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}"
                         href="{{ url('goals') }}">Availability</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}"
                         href="{{ url('goals') }}">Live sessions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}" href="{{ url('/') }}"
+                    <a class="nav-link {{ Request::is('/') ? 'active' : '' }}"
                         href="{{ url('goals') }}">Feedback</a>
                 </li>
 

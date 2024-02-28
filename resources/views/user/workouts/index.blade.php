@@ -20,7 +20,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Pain Relief</h2>
+                                    <h2 class="text-white">Pain Relief</h2>
                                     <small class="text-secondary">6 Workouts</small>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Waight Gain</h2>
+                                    <h2 class="text-white">Waight Gain</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Waight Loss</h2>
+                                    <h2 class="text-white">Waight Loss</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -62,7 +62,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Stretching</h2>
+                                    <h2 class="text-white">Stretching</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Warrior Workouts</h2>
+                                    <h2 class="text-white">Warrior Workouts</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Water Warrior</h2>
+                                    <h2 class="text-white">Water Warrior</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>

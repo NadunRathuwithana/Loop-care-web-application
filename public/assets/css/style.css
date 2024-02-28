@@ -107,7 +107,7 @@ body {
 .input-group-text {
     border-radius: 50px 0 0 50px !important;
 }
-
+/*
 .card-ui {
     background-clip: padding-box;
     box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
@@ -137,7 +137,7 @@ body {
     font-size: 0.9375rem;
     border-radius: 0.375rem;
     transition: all 0.2s ease-in-out;
-}
+} */
 
 .image-preview {
     display: none;
@@ -261,7 +261,6 @@ body {
 .sliderSwiper .swiper-slide {
     text-align: left;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -321,7 +320,6 @@ body {
 .boxCardSwiper .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -409,7 +407,7 @@ body {
 .categoryCardSwiper .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: transparent;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -454,7 +452,7 @@ body {
 .relatedVideoCardSwiper .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -499,7 +497,6 @@ body {
 .trainerCardSwiper .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -641,6 +638,7 @@ body {
     left: 0;
     background: linear-gradient(to top, white, transparent);
     z-index: 1;
+
 }
 
 .workout-name {

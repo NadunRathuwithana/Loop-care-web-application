@@ -17,7 +17,8 @@
                         <div class="card login-card" style="border-radius: 1rem;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
-                                    <img src="assets/img/login-reg/reg_patient.jpg" alt="login form" class="img-fluid login-img"/>
+                                    <img src="assets/img/login-reg/reg_patient.jpg" alt="login form"
+                                        class="img-fluid login-img" />
                                 </div>
                                 <div class="col-md-6 col-lg-7 d-flex align-items-center text-center justify-content-center">
                                     <div class="card-body p-4 p-lg-5 text-black">
@@ -31,11 +32,10 @@
                                                 style="height: 400px;">
                                                 <div class="col-12">
 
-                                                    <div class="all-steps d-none" id="all-steps"> <span
-                                                            class="step"></span>
-                                                        <span class="step"></span> <span class="step"></span> <span
-                                                            class="step"></span> <span class="step"></span><span
-                                                            class="step"></span> <span class="step"></span>
+                                                    <div class="all-steps d-none" id="all-steps">
+                                                        <span class="step"></span>
+                                                        <span class="step"></span>
+                                                        <span class="step"></span>
                                                     </div>
 
                                                     {{--  single tab  --}}
@@ -56,7 +56,19 @@
                                                             <div class="form-group mb-2">
                                                                 <input type="email" class="form-control input py-2 px-4"
                                                                     id="email" name="email"
-                                                                    aria-describedby="emailHelp" placeholder="Email">
+                                                                    placeholder="Email">
+                                                            </div>
+
+                                                            <div class="form-group mb-2">
+                                                                <input type="password" class="form-control input py-2 px-4"
+                                                                    id="password" name="password"
+                                                                    placeholder="Password">
+                                                            </div>
+
+                                                            <div class="form-group mb-2">
+                                                                <input type="password" class="form-control input py-2 px-4"
+                                                                    id="confirm-password" name="confirm-password"
+                                                                    placeholder="Confirm password">
                                                             </div>
 
                                                         </div>
@@ -210,8 +222,12 @@
                                                     <div class="d-flex justify-content-between">
                                                         <button type="button" class="btn btn-main" id="prevBtn"
                                                             onclick="nextPrev(-1)" style="width:160px;">Previous</button>
+
                                                         <button type="button" class="btn btn-main p-2" id="nextBtn"
                                                             onclick="nextPrev(1)" style="width:160px;">Next</button>
+
+                                                        <button type="submit" class="btn btn-main p-2" id="submitBtn"
+                                                             style="width:160px;">Submit</button>
                                                     </div>
                                                 </div>
                                             </div>

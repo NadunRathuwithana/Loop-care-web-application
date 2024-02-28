@@ -3,8 +3,6 @@
 //your javascript goes here
 var currentTab = 0;
 document.addEventListener("DOMContentLoaded", function(event) {
-
-
     showTab(currentTab);
 
 });
@@ -18,12 +16,15 @@ function showTab(n) {
         document.getElementById("prevBtn").style.display = "inline";
     }
     if (n == (x.length - 1)) {
-        document.getElementById("nextBtn").innerHTML = "Submit";
+        document.getElementById("nextBtn").style.display = "none"; // Hide Next button
+        document.getElementById("submitBtn").style.display = "inline"; // Show Submit button
     } else {
-        document.getElementById("nextBtn").innerHTML = "Next";
+        document.getElementById("nextBtn").style.display = "inline"; // Show Next button
+        document.getElementById("submitBtn").style.display = "none"; // Hide Submit button
     }
-    fixStepIndicator(n)
+    fixStepIndicator(n);
 }
+
 
 function nextPrev(n) {
     var x = document.getElementsByClassName("tab");

@@ -183,7 +183,7 @@
                 <form action="">
                     <label class="form-label" for="basic-default-fullname">Playlist Name</label>
                     <input type="text" class="form-control" placeholder="Enter Playlist Name" />
-                    <div class="modal-footer pb-0">
+                    <div class="modal-footer pt-3 pb-0 p-0">
                         <button type="button" class="btn btn-gray-sq btn-ui" data-bs-target="#newWorkout"
                             data-bs-toggle="modal" data-bs-dismiss="modal">Close</button>
                         <button type="button" class="btn btn-main-sq btn-ui" data-bs-target="#newWorkout"

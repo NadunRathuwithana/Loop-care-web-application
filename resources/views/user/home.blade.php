@@ -38,7 +38,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Morning Energizer</h2>
+                                    <h2 class="text-white">Morning Energizer</h2>
                                     <small class="text-secondary">6 Workouts</small>
                                 </div>
                             </div>
@@ -52,7 +52,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Lunchtime Power Break</h2>
+                                    <h2 class="text-white">Lunchtime Power Break</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Stairway to Fitness</h2>
+                                    <h2 class="text-white">Stairway to Fitness</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Flexibility Fiesta</h2>
+                                    <h2 class="text-white">Flexibility Fiesta</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -94,7 +94,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Warrior Workouts</h2>
+                                    <h2 class="text-white">Warrior Workouts</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -108,7 +108,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Water Warrior</h2>
+                                    <h2 class="text-white">Water Warrior</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -266,12 +266,12 @@
         </div>
     </div>
 
-    {{--  Today Goals  --}}
+    {{--  Your Goals  --}}
     <div class="slider-swiper-container mt-2 mt-md-5">
 
         {{--  Single slider  --}}
         <div class="container">
-            <h4 class="sub-title">Today Goals</h4>
+            <h4 class="sub-title">Your Goals</h4>
             <div class="swiper boxCardSwiper pt-0">
                 <div class="swiper-wrapper py-0 py-md-2">
 
@@ -283,7 +283,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Morning Energizer</h2>
+                                    <h2 class="text-white">Morning Energizer</h2>
                                     <small class="text-secondary">6 Workouts</small>
                                 </div>
                             </div>
@@ -297,7 +297,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Lunchtime Power Break</h2>
+                                    <h2 class="text-white">Lunchtime Power Break</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -311,7 +311,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Stairway to Fitness</h2>
+                                    <h2 class="text-white">Stairway to Fitness</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -325,7 +325,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Flexibility Fiesta</h2>
+                                    <h2 class="text-white">Flexibility Fiesta</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -339,7 +339,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Warrior Workouts</h2>
+                                    <h2 class="text-white">Warrior Workouts</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -353,7 +353,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Water Warrior</h2>
+                                    <h2 class="text-white">Water Warrior</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -383,7 +383,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Morning Energizer</h2>
+                                    <h2 class="text-white">Morning Energizer</h2>
                                     <small class="text-secondary">6 Workouts</small>
                                 </div>
                             </div>
@@ -397,7 +397,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Lunchtime Power Break</h2>
+                                    <h2 class="text-white">Lunchtime Power Break</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -411,7 +411,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Stairway to Fitness</h2>
+                                    <h2 class="text-white">Stairway to Fitness</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -425,7 +425,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Flexibility Fiesta</h2>
+                                    <h2 class="text-white">Flexibility Fiesta</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -439,7 +439,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Warrior Workouts</h2>
+                                    <h2 class="text-white">Warrior Workouts</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
@@ -453,7 +453,7 @@
                                     <div class="gradient-overlay"></div>
                                 </div>
                                 <div class="text-overlay">
-                                    <h2>Water Warrior</h2>
+                                    <h2 class="text-white">Water Warrior</h2>
                                     <small class="text-secondary">10 Workouts</small>
                                 </div>
                             </div>
