@@ -2,8 +2,8 @@
 
 @section('content')
     @include('layouts.userNav')
-    @include('user.goals.patials.create')
-    @include('user.goals.patials.view')
+    @include('user.goals.create')
+    @include('user.goals.view')
 
     <div class="container px-md-5 hero-slider mt-3">
 

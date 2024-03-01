@@ -47,7 +47,7 @@ class AdminController extends Controller
                 ->delete();
 
 
-            return redirect()->back()->with('message', 'Product deleted successfully');
+            return redirect()->back()->with('message', 'User deleted successfully');
         } catch (Exception $e) {
             return redirect()->back()->withErrors(['Failed to retrieve Data']);
 

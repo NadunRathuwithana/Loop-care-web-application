@@ -10,6 +10,8 @@ use App\Http\Controllers\Admin\MealManagementController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\MealController;
+use App\Http\Controllers\GoalManagement;
 
 Route::get('404', [WeblinkController::class, 'NotFound']);
 Route::get('maintenance', [WeblinkController::class, 'Maintenance']);
@@ -40,11 +42,27 @@ Route::get('admin', [WeblinkController::class, 'AdminLogin']);
 
 Route::get('dashboard', [WeblinkController::class, 'Dashboard']);
 
+// admin user management
 Route::get('admin_users', [AdminController::class, 'Index']);
 Route::post('create_admin_users', [AdminController::class, 'Create']);
 Route::get('delete_admin_users{id}', [AdminController::class, 'Delete']);
 Route::get('status_admin_users{id}', [AdminController::class, 'ChangeStatus']);
 Route::post('/edit_admin_users/{id}', [AdminController::class, 'Edit']);
+
+// admin meal management
+Route::get('meal_management', [MealController::class, 'Index']);
+Route::post('/create_meal', [MealController::class, 'Create']);
+Route::get('delete_meal{id}', [MealController::class, 'Delete']);
+Route::get('status_meal{id}', [MealController::class, 'ChangeStatus']);
+Route::post('/edit_meal/{id}', [MealController::class, 'Edit']);
+
+
+// admin goal management
+Route::get('goal_management', [GoalManagement::class, 'Index']);
+Route::post('/create_goal', [GoalManagement::class, 'Create']);
+Route::get('delete_goal{id}', [GoalManagement::class, 'Delete']);
+Route::get('status_goal{id}', [GoalManagement::class, 'ChangeStatus']);
+// Route::post('/edit_admin_users/{id}', [AdminController::class, 'Edit']);
 
 
 Route::get('questions_setup', [WeblinkController::class, 'Questions']);
@@ -53,7 +71,7 @@ Route::get('all_users', [WeblinkController::class, 'AllUsers']);
 Route::get('workout_management', [WeblinkController::class, 'WorkoutManagement']);
 Route::get('admin_account', [WeblinkController::class, 'Account']);
 Route::get('appointments_management', [WeblinkController::class, 'AppointmentManagement']);
-Route::get('meal_management', [WeblinkController::class, 'MealManagement']);
+
 Route::get('live_sessions_management', [WeblinkController::class, 'LiveSessions']);
 Route::get('review_management', [WeblinkController::class, 'Reviews']);
 Route::get('report_management', [WeblinkController::class, 'Report']);
@@ -69,24 +87,6 @@ Route::get('report_management', [WeblinkController::class, 'Report']);
         Route::delete('/delete-questions-setup/{id}', [QuetionSetupController::class, 'destroy'])->name('delete-questions-setup');
         Route::put('/update-questions-setup/{id}', [QuetionSetupController::class, 'update'])->name('update-questions-setup');
     });
-
-    //goal management
-    Route::group([
-        'prefix' => 'goal',
-        'as' => 'goal.'
-    ], function () {
-        Route::get('/', [GoalManagementController::class, 'index'])->name('goal');
-        Route::post('/store-goal', [GoalManagementController::class, 'store'])->name('store-goal');
-        Route::get('/get-goal', [GoalManagementController::class, 'getAjaxeGoalData'])->name('get-goal');
-        Route::delete('/delete-goal/{id}', [GoalManagementController::class, 'destroy'])->name('delete-goal');
-        Route::put('/update-goal/{id}', [GoalManagementController::class, 'update'])->name('update-goal');
-        Route::delete('/goal-status/{$id}', [GoalManagementController::class, 'statusChange'])->name('goal-status');
-    });
-
-    // mealmanagement
-    Route::resource('meals', MealManagementController::class);
-
-
 
 
 
