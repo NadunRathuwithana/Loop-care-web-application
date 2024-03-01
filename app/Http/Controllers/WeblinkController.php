@@ -173,7 +173,7 @@ class WeblinkController extends Controller
             return redirect('/maintenance');
         }
     }
-    
+
 
     ///////////////////////////////////////////////////////////// user/////////////////////////////////////////////////////
 
@@ -217,14 +217,14 @@ class WeblinkController extends Controller
     }
 
 
-    public function Users()
-    {
-        try {
-            return view('admin/users/users');
-        } catch (Exception $e) {
-            return redirect('/maintenance');
-        }
-    }
+    // public function Users()
+    // {
+    //     try {
+    //         return view('admin/users/users');
+    //     } catch (Exception $e) {
+    //         return redirect('/maintenance');
+    //     }
+    // }
 
     public function Questions()
     {

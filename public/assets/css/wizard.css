@@ -306,29 +306,18 @@ input.invalid {
     border: 1px solid rgba(255, 255, 255, 0.23);
 }
 
-
 /* upload */
 .file-upload-container {
     position: relative;
 }
 
 .file-input {
-    display: none;
+    display: none !important;
 }
-
-/* .custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 50px;
-} */
 
 .selected-file-name {
     color: #555;
 }
-
 
 .custom-file-upload {
     padding: 10px;

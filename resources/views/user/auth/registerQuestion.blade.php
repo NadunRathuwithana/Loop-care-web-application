@@ -29,6 +29,7 @@
                                 <p class="text-white m-0 blink-text">Creating questions for you...</p>
                             </div>
                         </div>
+
                         <div class="card login-card  questionForm" style="border-radius: 1rem; display: none;">
                             <div class="row g-0">
                                 <div class="col-md-6 col-lg-5 d-none d-md-block">
@@ -186,4 +187,6 @@
         </div>
     </div>
     </div>
+
+   
 @endsection

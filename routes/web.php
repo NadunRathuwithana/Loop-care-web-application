@@ -9,11 +9,12 @@ use App\Http\Controllers\Admin\GoalManagementController;
 use App\Http\Controllers\Admin\MealManagementController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AdminController;
 
 Route::get('404', [WeblinkController::class, 'NotFound']);
 Route::get('maintenance', [WeblinkController::class, 'Maintenance']);
 
-Route::get('registerQuestion', [WeblinkController::class, 'RegisterQuestion']);
+Route::post('registerQuestion', [WeblinkController::class, 'RegisterQuestion']);
 
 // ////////////////----Patient----/////////////////////
 Route::get('', [WeblinkController::class, 'Home']);
@@ -39,7 +40,13 @@ Route::get('admin', [WeblinkController::class, 'AdminLogin']);
 
 Route::get('dashboard', [WeblinkController::class, 'Dashboard']);
 
-Route::get('user_management', [WeblinkController::class, 'Users']);
+Route::get('admin_users', [AdminController::class, 'Index']);
+Route::post('create_admin_users', [AdminController::class, 'Create']);
+Route::get('delete_admin_users{id}', [AdminController::class, 'Delete']);
+Route::get('status_admin_users{id}', [AdminController::class, 'ChangeStatus']);
+Route::post('/edit_admin_users/{id}', [AdminController::class, 'Edit']);
+
+
 Route::get('questions_setup', [WeblinkController::class, 'Questions']);
 Route::get('pending_request', [WeblinkController::class, 'PendingRequest']);
 Route::get('all_users', [WeblinkController::class, 'AllUsers']);

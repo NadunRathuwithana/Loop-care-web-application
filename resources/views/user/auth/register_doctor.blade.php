@@ -27,8 +27,9 @@
                                             <p class="text-secondary">Doctor Registration</p>
                                         </div>
 
-                                        <form action="{{url('doctorRegister')}}" method="post" enctype="multipart/form-data">
-                                            {{csrf_field()}}
+                                        <form action="{{ url('registerQuestion') }}" method="post"
+                                            enctype="multipart/form-data">
+                                            {{ csrf_field() }}
                                             <div class="row d-flex justify-content-center align-items-top"
                                                 style="height: 400px;">
                                                 <div class="col-12">
@@ -46,8 +47,7 @@
                                                             <p class="text-main">About you</p>
                                                             <div class="form-group mb-2">
                                                                 <input type="text" class="form-control input py-2 px-4"
-                                                                    id="fName" name="fName"
-                                                                    placeholder="First Name">
+                                                                    id="fName" name="fName" placeholder="First Name">
                                                             </div>
 
                                                             <div class="form-group mb-2">
@@ -139,75 +139,17 @@
                                                         <div class="form-group mb-2">
                                                             <div class="file-upload-container">
                                                                 <input type="file"
-                                                                    class="form-control input file-input"
-                                                                    id="file" name="file"
+                                                                    class="form-control input file-input" id="file"
+                                                                    name="file"
                                                                     onchange="displaySelectedFileName(this)" />
                                                                 <label for="medical_licence" class="custom-file-upload">
                                                                     <span class="selected-file-name">Upload Medical
                                                                         Licence</span>
                                                                 </label>
                                                             </div>
-
                                                         </div>
 
 
-                                                    </div>
-
-                                                    {{--  single tab  --}}
-                                                    <div class="tab">
-                                                        <p>Your Speciality?</p>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Orthopedic">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Orthopedic</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Physical Medicine and
-                                                                Rehabilitation (PM&R)">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Physical Medicine and
-                                                                        Rehabilitation (PM&R)</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Physical Therapist
-                                                                (PT)">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Physical Therapist
-                                                                        (PT)</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Chiropractor">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Chiropractor</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Nutritionist">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Nutritionist</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Rheumatologist">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Rheumatologist</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
                                                     </div>
 
                                                 </div>
@@ -235,4 +177,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document
+            .querySelector(".custom-file-upload")
+            .addEventListener("click", function() {
+                document.querySelector(".file-input").click();
+            });
+
+        // Function to display selected file name
+        function displaySelectedFileName(input) {
+            var fileName = input.files[0].name;
+            var container = input.closest(".file-upload-container");
+            container.querySelector(".selected-file-name").innerHTML = fileName;
+        }
+    </script>
 @endsection

@@ -129,8 +129,8 @@
         </li>
 
         {{--  Manage Users  --}}
-        <li class="menu-item {{ Request::is('user_management') ? 'active' : '' }}">
-            <a href="{{ url('user_management') }}" class="menu-link">
+        <li class="menu-item {{ Request::is('admin_users') ? 'active' : '' }}">
+            <a href="{{ url('admin_users') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-user"></i>
                 <div data-i18n="Account Settings">Admin Management</div>
             </a>

@@ -2,11 +2,6 @@
 
 @section('content')
     <div class="container-fluid">
-        <video autoplay muted loop class="bg-video">
-            <source src="{{ url('assets/img/login-reg/bg-video.mp4') }}" type="video/mp4">
-            <!-- Add additional source elements for different video formats (webm, ogg) if necessary -->
-            Your browser does not support the video tag.
-        </video>
         <div class="vh-100">
             <div class="container py-5 h-100">
                 <div class="row d-flex justify-content-center align-items-center h-100">
@@ -21,7 +16,7 @@
                                     <div class="card-body p-4 p-lg-5 text-black">
 
 
-                                        <form action="" method="post" enctype="multipart/form-data">
+                                        <form action="{{ url('/') }}" method="post" enctype="multipart/form-data">
 
                                             <div class="form-group pt-3 mb-5 text-center">
                                                 <img class="img-fluid mb-5" src="{{ url('assets/img/navBlack.png') }}" alt="loopcare" style="width: 100px">

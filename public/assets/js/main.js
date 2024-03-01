@@ -1,10 +1,8 @@
-
 // wizard
 //your javascript goes here
 var currentTab = 0;
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", function (event) {
     showTab(currentTab);
-
 });
 
 function showTab(n) {
@@ -15,7 +13,7 @@ function showTab(n) {
     } else {
         document.getElementById("prevBtn").style.display = "inline";
     }
-    if (n == (x.length - 1)) {
+    if (n == x.length - 1) {
         document.getElementById("nextBtn").style.display = "none"; // Hide Next button
         document.getElementById("submitBtn").style.display = "inline"; // Show Submit button
     } else {
@@ -24,7 +22,6 @@ function showTab(n) {
     }
     fixStepIndicator(n);
 }
-
 
 function nextPrev(n) {
     var x = document.getElementsByClassName("tab");
@@ -44,7 +41,10 @@ function nextPrev(n) {
 }
 
 function validateForm() {
-    var x, y, i, valid = true;
+    var x,
+        y,
+        i,
+        valid = true;
     x = document.getElementsByClassName("tab");
     y = x[currentTab].getElementsByTagName("input");
     for (i = 0; i < y.length; i++) {
@@ -53,62 +53,58 @@ function validateForm() {
             valid = false;
         }
     }
-    if (valid) { document.getElementsByClassName("step")[currentTab].className += " finish"; }
+    if (valid) {
+        document.getElementsByClassName("step")[currentTab].className +=
+            " finish";
+    }
     return valid;
 }
 
 function fixStepIndicator(n) {
-    var i, x = document.getElementsByClassName("step");
-    for (i = 0; i < x.length; i++) { x[i].className = x[i].className.replace(" active", ""); }
+    var i,
+        x = document.getElementsByClassName("step");
+    for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active", "");
+    }
     x[n].className += " active";
 }
 
 $(document).ready(function () {
     // Handle the radio button behavior
-    $('.radio-input').change(function () {
+    $(".radio-input").change(function () {
         // Uncheck other radio buttons
-        $('.radio-input[name="' + $(this).attr('name') + '"]').not(this).prop('checked', false);
+        $('.radio-input[name="' + $(this).attr("name") + '"]')
+            .not(this)
+            .prop("checked", false);
     });
-});
-
-// upload file
-function displaySelectedFileName(input) {
-
-   var fileName = input.files[0].name;
-    var container = input.closest('.file-upload-container');
-    container.querySelector('.selected-file-name').innerHTML = fileName;
-}
-
-// select 2
-
-$(document).ready(function() {
-    $('.multiple').select2();
 });
 
 
 // image upload
-window.onload = function() {
-    var imageUploaders = document.querySelectorAll('.image-upload');
-    imageUploaders.forEach(function(uploader) {
-        uploader.addEventListener('change', previewImage);
+window.onload = function () {
+    var imageUploaders = document.querySelectorAll(".image-upload");
+    imageUploaders.forEach(function (uploader) {
+        uploader.addEventListener("change", previewImage);
     });
-}
+};
 
 function previewImage(event) {
     var reader = new FileReader();
-    reader.onload = function(){
-        var output = event.target.parentNode.querySelector('.image-preview');
+    reader.onload = function () {
+        var output = event.target.parentNode.querySelector(".image-preview");
         output.src = reader.result;
-        output.style.display = 'block';
+        output.style.display = "block";
     };
     reader.readAsDataURL(event.target.files[0]);
 }
 
-
 // loader js
-$(document).ready(function() {
-    setTimeout(function() {
-        $('.loader').hide();
-        $('.questionForm').show();
+$(document).ready(function () {
+    setTimeout(function () {
+        $(".loader").hide();
+        $(".questionForm").show();
     }, 6000);
 });
+
+
+//delete modal

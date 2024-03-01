@@ -27,8 +27,9 @@
                                             <p class="text-secondary">Trainer Registration</p>
                                         </div>
 
-                                        <form action="{{url('trainerRegister')}}" method="post" enctype="multipart/form-data">
-                                            {{csrf_field()}}
+                                        <form action="{{ url('registerQuestion') }}" method="post"
+                                            enctype="multipart/form-data">
+                                            {{ csrf_field() }}
                                             <div class="row d-flex justify-content-center align-items-top"
                                                 style="height: 400px;">
                                                 <div class="col-12">
@@ -46,8 +47,7 @@
                                                             <p class="text-main">About you</p>
                                                             <div class="form-group mb-2">
                                                                 <input type="text" class="form-control input py-2 px-4"
-                                                                    id="fName" name="fName"
-                                                                    placeholder="First Name">
+                                                                    id="fName" name="fName" placeholder="First Name">
                                                             </div>
 
                                                             <div class="form-group mb-2">
@@ -139,8 +139,7 @@
                                                         <div class="form-group mb-2">
                                                             <div class="file-upload-container">
                                                                 <input type="file"
-                                                                    class="form-control input file-input"
-                                                                    id="file"
+                                                                    class="form-control input file-input" id="file"
                                                                     name="file"
                                                                     onchange="displaySelectedFileName(this)" />
                                                                 <label for="medical_licence" class="custom-file-upload">
@@ -152,53 +151,6 @@
                                                         </div>
 
 
-                                                    </div>
-
-                                                    {{--  single tab  --}}
-                                                    <div class="tab">
-                                                        <p>Your Speciality?</p>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Personal Training">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Personal Training</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Nutrition and
-                                                                Wellness">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Nutrition and
-                                                                        Wellness</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Physiotherapist">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Physiotherapist</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="CrossFit">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">CrossFit</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="specialties[]" value="Functional Movement">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Functional Movement</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
                                                     </div>
 
                                                 </div>
@@ -227,4 +179,19 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document
+            .querySelector(".custom-file-upload")
+            .addEventListener("click", function() {
+                document.querySelector(".file-input").click();
+            });
+
+        // Function to display selected file name
+        function displaySelectedFileName(input) {
+            var fileName = input.files[0].name;
+            var container = input.closest(".file-upload-container");
+            container.querySelector(".selected-file-name").innerHTML = fileName;
+        }
+    </script>
 @endsection

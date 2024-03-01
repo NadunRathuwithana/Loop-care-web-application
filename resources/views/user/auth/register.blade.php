@@ -27,7 +27,7 @@
                                             <p class="text-secondary">Patient Registration</p>
                                         </div>
 
-                                        <form action="{{ url('patientRegister') }}" method="post"
+                                        <form action="{{ url('registerQuestion') }}" method="post"
                                             enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="row d-flex justify-content-center align-items-top"
@@ -105,8 +105,9 @@
 
                                                         {{--  height  --}}
                                                         <div class="input-group mb-2 m-0 p-0 selectWizard">
-                                                            <span class="input-group-text">Height</span>
-                                                            <select class="form-select select-label text-secondary"
+                                                            <span class="input-group-text border-0">Height</span>
+                                                            <select
+                                                                class="form-select select-label text-secondary bg-transparent"
                                                                 aria-label="Default select example" id="height"
                                                                 name="height">
                                                                 <option value="4 feet">4 feet</option>
@@ -142,8 +143,9 @@
 
                                                         {{--  weight  --}}
                                                         <div class="input-group mb-2 m-0 p-0 selectWizard">
-                                                            <span class="input-group-text">Weight</span>
-                                                            <select class="form-select select-label text-secondary"
+                                                            <span class="input-group-text border-0">Weight</span>
+                                                            <select
+                                                                class="form-select select-label text-secondary bg-transparent"
                                                                 aria-label="Default select example" id="weight"
                                                                 name="weight">
 
@@ -162,7 +164,7 @@
                                                         {{--  birthday  --}}
                                                         <div class="input-group mb-2 m-0 p-0 selectWizard">
                                                             <div class="d-flex justify-content-between w-100">
-                                                                <span class="input-group-text">Birthday</span>
+                                                                <span class="input-group-text border-0">Birthday</span>
                                                                 <div class="form-group">
                                                                     <input type="date"
                                                                         class="form-control input py-2 px-4 border-0 text-secondary"

@@ -94,3 +94,10 @@ function previewImage(event) {
         );
     });
 })();
+
+
+
+function deleteItem(id) {
+    $('#deleteItemId').val(id);
+    $('#deleteConfirmationModal').modal('show');
+}
