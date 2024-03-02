@@ -146,12 +146,15 @@
         </li>
 
         {{--  Logout  --}}
-        <li class="menu-item {{ Request::is('') ? 'active' : '' }}">
+        <li class="menu-item ms-2 {{ Request::is('') ? 'active' : '' }}">
             <!-- link -->
-            <a href="{{ url('') }}" class="menu-link text-danger">
-                <i class="menu-icon tf-icons bx bx-log-out"></i>
-                <div data-i18n="Analytics">Logout</div>
-            </a>
+            <form action="/logout" method="POST">
+                @csrf
+                <button class="dropdown-item text-danger" type="submit" >
+                    <i class="menu-icon tf-icons bx bx-log-out me-2"></i>
+                    <span class="align-middle">Log Out</span>
+                </button>
+            </form>
         </li>
     </ul>
 </aside>

@@ -63,14 +63,6 @@ class RegisterController extends Controller
 
                 //save patient pains
 
-                foreach ($request->pain as $checkboxValue) {
-
-
-                    $pains = new PatientPains();
-                    $pains->patientId = $userId;
-                    $pains->pain = $checkboxValue;
-                    $pains->save();
-                }
 
 
 
@@ -103,7 +95,9 @@ class RegisterController extends Controller
             session()->put('lName', $lName);
 
 
-            return $fName;
+            // return $userType;
+            return redirect('/userQuestions');
+
         } catch (Exception $e) {
             return redirect()->back()->with('error', 'Something quite wrong happened');
         }
@@ -166,13 +160,6 @@ class RegisterController extends Controller
 
                 //save patient pains
 
-                foreach ($request->specialties as $checkboxValue) {
-                    $pains = new DocSpeciality();
-                    $pains->doctorId = $userId;
-                    $pains->specialties = $checkboxValue;
-                    $pains->save();
-                }
-
 
 
                 Auth::login($user);
@@ -204,7 +191,8 @@ class RegisterController extends Controller
             session()->put('lName', $lName);
 
 
-            return $fName;
+                        return redirect('/userQuestions');
+
         } catch (Exception $e) {
             return redirect()->back()->with('error', 'Something quite wrong happened');
         }
@@ -265,12 +253,6 @@ class RegisterController extends Controller
 
                 //save patient pains
 
-                foreach ($request->specialties as $checkboxValue) {
-                    $pains = new TrainerSpeciality();
-                    $pains->trainerId = $userId;
-                    $pains->specialties = $checkboxValue;
-                    $pains->save();
-                }
 
 
 
@@ -303,7 +285,8 @@ class RegisterController extends Controller
             session()->put('lName', $lName);
 
 
-            return $fName;
+                        return redirect('/userQuestions');
+
         } catch (Exception $e) {
             return redirect()->back()->with('error', 'Something quite wrong happened');
         }

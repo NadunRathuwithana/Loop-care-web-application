@@ -16,7 +16,7 @@
                     <div class="col col-xl-10">
                         <div class="loader">
                             <div class="d-flex justify-content-center align-items-center mb-3">
-                                {{--  spinner  --}}
+
                                 <div class="spinner">
                                     <div class="dot"></div>
                                     <div class="dot"></div>
@@ -43,139 +43,75 @@
                                             <p class="text-secondary">Collecting Information</p>
                                         </div>
 
-                                        <form action="{{ url('patientRegister') }}" method="post"
-                                            enctype="multipart/form-data">
-                                            {{ csrf_field() }}
-                                            <div class="row d-flex justify-content-center align-items-top"
-                                                style="height: 400px;">
-                                                <div class="col-12">
+                                        {{-- <form action="{{ url('') }}" method="post" enctype="multipart/form-data">
+                                            {{ csrf_field() }} --}}
+                                        <div class="row d-flex justify-content-center align-items-top"
+                                            style="height: 400px;">
+                                            <div class="col-12">
 
-                                                    <div class="all-steps d-none" id="all-steps">
-                                                        <span class="step"></span>
-                                                        <span class="step"></span>
-                                                        <span class="step"></span>
-                                                        <span class="step"></span>
-                                                        <span class="step"></span>
-                                                        <span class="step"></span>
-                                                        <span class="step"></span>
-                                                    </div>
-
-                                                    {{--  single tab  --}}
-                                                    <div class="tab">
-                                                        <p>Do you have any pain?</p>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Back Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="pain[]"
-                                                                    value="Neck Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Neck Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="pain[]"
-                                                                    value="Knee Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Knee Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="pain[]"
-                                                                    value="Elbow Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Elbow Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="pain[]"
-                                                                    value="No Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">No I have not pains</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-                                                    {{--  single tab  --}}
-                                                    <div class="tab">
-                                                        <p>Do you have any pain?</p>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Back Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox" name="pain[]"
-                                                                    value="Neck Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Neck Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox"
-                                                                    name="pain[]" value="Knee Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Knee Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox"
-                                                                    name="pain[]" value="Elbow Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">Elbow Pain</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2">
-                                                            <label class="checkbox-wrapper">
-                                                                <input class="checkbox-input" type="checkbox"
-                                                                    name="pain[]" value="No Pain">
-                                                                <span class="checkbox-tile">
-                                                                    <span class="checkbox-label">No I have not pains</span>
-                                                                </span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-
-
+                                                <div class="all-steps d-none" id="all-steps">
+                                                    @if (!empty($questions))
+                                                        @foreach ($questions as $data)
+                                                            <span class="step"></span>
+                                                        @endforeach
+                                                    @endif
                                                 </div>
-                                                <div style="overflow:auto;" id="nextprevious"
-                                                    class="justify-content-between w-100 mt-auto">
 
-                                                    <div class="d-flex justify-content-between">
-                                                        <button type="button" class="btn btn-main" id="prevBtn"
-                                                            onclick="nextPrev(-1)" style="width:160px;">Previous</button>
 
-                                                        <button type="button" class="btn btn-main p-2" id="nextBtn"
-                                                            onclick="nextPrev(1)" style="width:160px;">Next</button>
+                                                @if (!empty($questions))
+                                                    @foreach ($questions as $data)
+                                                        {{--  single tab  --}}
+                                                        <div class="tab">
+                                                            <p>{{ $data->questionName }}</p>
 
-                                                        <button type="submit" class="btn btn-main p-2" id="submitBtn"
-                                                            style="width:160px;">Submit</button>
-                                                    </div>
+                                                            @if (!empty($answers))
+                                                                @foreach ($answers as $item)
+                                                                    @if ($data->id == $item->quetion_id)
+                                                                        <div class="checkbox-wrapper p-0 pe-1 mb-2 question"
+                                                                            id="{{ $data->questionName }}">
+                                                                            <label class="checkbox-wrapper">
+                                                                                <input class="checkbox-input answer"
+                                                                                    type="checkbox"
+                                                                                    id="{{ $item->answer }}">
+                                                                                <span class="checkbox-tile">
+                                                                                    <span
+                                                                                        class="checkbox-label">{{ $item->answer }}</span>
+                                                                                </span>
+                                                                            </label>
+                                                                        </div>
+                                                                    @endif
+                                                                @endforeach
+                                                            @endif
+
+                                                        </div>
+                                                    @endforeach
+                                                @endif
+
+
+
+
+
+                                            </div>
+                                            <div style="overflow:auto;" id="nextprevious"
+                                                class="justify-content-between w-100 mt-auto">
+
+                                                <div class="d-flex justify-content-between">
+                                                    <button type="button" class="btn btn-main" id="prevBtn"
+                                                        onclick="nextPrev(-1)" style="width:160px;">Previous</button>
+
+                                                    <button type="button" class="btn btn-main p-2" id="nextBtn"
+                                                        onclick="nextPrev(1)" style="width:160px;">Next</button>
+
+
+                                                    <a href="{{ url('/answerFinal') }}"
+                                                    class="btn btn-main p-2" id="submitBtn"
+                                                    style="width:160px;">Submit
+                                                    </a>
+                                                 
                                                 </div>
                                             </div>
-                                        </form>
+                                        </div>
+                                        {{-- </form> --}}
 
                                     </div>
                                 </div>
@@ -188,5 +124,31 @@
     </div>
     </div>
 
-   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('input[type=checkbox]').on('change', function() {
+
+                let answerId = $(this).attr('id');
+                let questionId = $(this).closest('.question').attr('id');
+
+                console.log(answerId, questionId);
+                $.ajax({
+                    method: 'POST',
+                    url: '/saveUserAnswer',
+                    data: {
+                        '_token': '{{ csrf_token() }}',
+                        answer: answerId,
+                        question: questionId,
+                    },
+                    success: function(res) {
+                        console.log(res);
+
+                    }
+                });
+
+            });
+        });
+    </script>
+
 @endsection

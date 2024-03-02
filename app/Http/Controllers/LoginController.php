@@ -40,20 +40,17 @@ class LoginController extends Controller
             session()->put('lName', $lName);
 
 
-            if ($userType == "Doctor") {
-                return "Im a Doctor";
+            if ($userType == "Patient") {
 
-            }elseif ($userType == "Patient") {
+                return redirect('/');
 
-                return "Im a Patient";
+            }elseif ($userType == "Doctor") {
+
+                return redirect('/doctor');
 
             }elseif ($userType == "Trainer") {
 
-                return "Im a Trainer";
-
-            }elseif($userType == "Admin"){
-                return redirect('/dashboard');
-
+                return redirect('/trainer');
 
             }else{
                 return redirect('/logout');

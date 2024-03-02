@@ -2,10 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Question;
+use App\Models\QuestionsAnswer;
+use App\Models\UserQuestionAnswers;
 use Exception;
+use Illuminate\Auth\Events\Logout;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Session;
 
 class WeblinkController extends Controller
 {
@@ -168,14 +174,89 @@ class WeblinkController extends Controller
     public function RegisterQuestion()
     {
         try {
-            return view('user/auth/registerQuestion');
+
+            $userType = Session('userType');
+
+
+            $questions = Question::where('userType', '=', $userType)->get();
+
+            $answers = QuestionsAnswer::join('questions', 'questions.id', '=', 'questions_answers.quetion_id')->where('questions.userType', '=', $userType)->select('questions_answers.*')->get();
+
+
+
+            return view('user/auth/registerQuestion', compact('questions', 'answers'));
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
     }
 
 
+    public function SaveUserAnswer(Request $request)
+    {
+        try {
+
+            $id = Session('id');
+
+
+            $answer = $request->answer;
+            $question = $request->question;
+
+            // Check if the user has already answered this question
+            $existingAnswer = UserQuestionAnswers::where('userId', $id)
+                ->where('question', $question)
+                ->where('answer', $answer)
+                ->first();
+
+            if ($existingAnswer) {
+
+                $existingAnswer->delete();
+            }else{
+
+            $userAnswer = new UserQuestionAnswers();
+            $userAnswer->userId = $id;
+            $userAnswer->question = $question;
+            $userAnswer->answer = $answer;
+            $userAnswer->save();
+            }
+            return response('success',200);
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
     ///////////////////////////////////////////////////////////// user/////////////////////////////////////////////////////
+
+
+    public function AnswerFinal()
+    {
+        try {
+            $userType = Session('userType');
+
+            if($userType =="Patient"){
+                return redirect('/');
+
+            }else if($userType =="Doctor" || $userType =="Trainer"){
+
+                //logging out
+                session()->forget('userId');
+                session()->forget('fName');
+                session()->forget('userType');
+                session()->forget('lName');
+                session()->forget('id');
+                session()->flush();
+
+            //   return "show pending for approval";
+            return redirect('/');
+
+            }
+
+
+
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
 
 
     public function NotFound()

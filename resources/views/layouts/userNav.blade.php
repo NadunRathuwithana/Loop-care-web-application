@@ -61,7 +61,7 @@
                             </div>
                             <div class="flex-grow-1">
                                 <!-- user name -->
-                                <span class="fw-semibold d-block">John Doe</span>
+                                <span class="fw-semibold d-block">{{ \Illuminate\Support\Facades\Auth::user()->fName }}</span></span>
                             </div>
                         </div>
                     </a>
@@ -81,10 +81,14 @@
                 </li>
                 <li>
                     <!-- logout -->
-                    <a class="dropdown-item" href="auth-login-basic.html">
-                        <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
-                        <span class="align-middle">Log Out</span>
-                    </a>
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button class="dropdown-item" type="submit" >
+                            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>
+                            <span class="align-middle">Log Out</span>
+                        </button>
+                    </form>
+
                 </li>
             </ul>
         </div>

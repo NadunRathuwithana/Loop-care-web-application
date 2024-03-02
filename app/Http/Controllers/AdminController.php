@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
-use App\Models\AdminUser;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 
 class AdminController extends Controller
@@ -13,8 +14,18 @@ class AdminController extends Controller
     public function index()
     {
         try {
-            $allAdminUsers = AdminUser::get();
+            $allAdminUsers = User::where('role', 'Admin')->get();
             return view('admin.users.index', compact('allAdminUsers'));
+        } catch (Exception $e) {
+            return redirect('/maintenance');
+        }
+    }
+
+    public function AllUsers()
+    {
+        try {
+            $allUsers = User::where('role', 'user')->get();
+            return view('admin.signup_management.all_users', compact('allUsers'));
         } catch (Exception $e) {
             return redirect('/maintenance');
         }
@@ -24,17 +35,21 @@ class AdminController extends Controller
     {
 
         try {
+            
+            $admin_user = new User();
 
-            $admin_user = new AdminUser();
-
-            $admin_user->first_name = $request->first_name;
-            $admin_user->last_name = $request->last_name;
+            $admin_user->fName = $request->fName;
+            $admin_user->lName = $request->lName;
             $admin_user->email = $request->email;
-            $admin_user->role = $request->role;
+            $admin_user->password = Hash::make($request->password);
+            $admin_user->userType = $request->role;
+            $admin_user->role = "Admin";
 
             $admin_user->save();
+            
             return redirect()->back()->with('message', 'User Added successfully');
         } catch (Exception $e) {
+         
             return redirect()->back()->withErrors(['Failed to retrieve Data']);
 
         }
@@ -42,7 +57,7 @@ class AdminController extends Controller
     public function Delete($id)
     {
         try {
-            DB::table('admin_users')
+            DB::table('users')
                 ->where(['id' => $id])
                 ->delete();
 
@@ -57,18 +72,15 @@ class AdminController extends Controller
     public function ChangeStatus($id)
     {
         try {
-            // Retrieve the current value of is_active
-            $currentStatus = DB::table('admin_users')
+            $currentStatus = DB::table('users')
                 ->where('id', $id)
-                ->value('is_active');
+                ->value('isActive');
 
-            // Toggle the value of is_active
             $newStatus = $currentStatus == 0 ? 1 : 0;
 
-            // Update the database with the new status
-            DB::table('admin_users')
+            DB::table('users')
                 ->where('id', $id)
-                ->update(['is_active' => $newStatus]);
+                ->update(['isActive' => $newStatus]);
 
             return redirect()->back()->with('message', 'Status changed successfully');
         } catch (Exception $e) {
@@ -81,12 +93,12 @@ class AdminController extends Controller
     public function Edit(Request $request, $id)
 {
     try {
-        $admin_user = AdminUser::findOrFail($id);
+        $admin_user = User::findOrFail($id);
 
-        $admin_user->first_name = $request->input('first_name');
-        $admin_user->last_name = $request->input('last_name');
+        $admin_user->fName = $request->input('first_name');
+        $admin_user->lName = $request->input('last_name');
         $admin_user->email = $request->input('email');
-        $admin_user->role = $request->input('role');
+        $admin_user->userType = $request->input('role');
 
         $admin_user->save();
 

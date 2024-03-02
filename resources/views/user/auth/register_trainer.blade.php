@@ -27,7 +27,7 @@
                                             <p class="text-secondary">Trainer Registration</p>
                                         </div>
 
-                                        <form action="{{ url('registerQuestion') }}" method="post"
+                                        <form action="{{ url('trainerRegister') }}" method="post"
                                             enctype="multipart/form-data">
                                             {{ csrf_field() }}
                                             <div class="row d-flex justify-content-center align-items-top"

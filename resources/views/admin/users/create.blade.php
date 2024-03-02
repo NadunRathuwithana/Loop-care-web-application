@@ -7,27 +7,34 @@
                 <h5 class="modal-title" id="exampleModalLabel1">Add User</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <form action="{{ url('create_admin_users') }}" method="POST" class="needs-validation" novalidate>
+            <form action="{{ url('create_admin_users') }}" method="POST" class="needs-validation" novalidate autocomplete="off">
                 {{ csrf_field() }}
                 <div class="modal-body">
                     <div class="row">
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">First Name</label>
-                            <input type="text" class="form-control" name="first_name" id="first_name"
-                                placeholder="John" required />
+                            <input type="text" class="form-control" name="fName" id="fName"
+                                placeholder="Enter first name" required />
                             <div class="invalid-feedback">Please enter a first name.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">Last Name</label>
-                            <input type="text" class="form-control" name="last_name" id="last_name" placeholder="Doe"
+                            <input type="text" class="form-control" name="lName" id="lName" placeholder="Enter last name"
                                 required />
                             <div class="invalid-feedback">Please enter a last name.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-email">Email</label>
                             <input type="email" class="form-control" name="email" id="email"
-                                placeholder="john.doe@loopcare.com" required />
+                                placeholder="Enter email" required autocomplete="off" />
+
                             <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="basic-default-email">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Enter password" required minlength="6" autocomplete="off"/>
+                            <div class="invalid-feedback">Please enter a password with a minimum of 6 characters.</div>
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-role">Role</label>

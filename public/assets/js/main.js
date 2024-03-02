@@ -103,7 +103,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".loader").hide();
         $(".questionForm").show();
-    }, 6000);
+    }, 1000);
 });
 
 

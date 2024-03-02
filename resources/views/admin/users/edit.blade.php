@@ -14,12 +14,12 @@
                         <div class="mb-3">
                             <label class="form-label" for="first_name">First Name</label>
                             <input type="text" class="form-control" id="first_name" name="first_name"
-                                value="{{ $data->first_name }}" />
+                                value="{{ $data->fName }}" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="last_name">Last Name</label>
                             <input type="text" class="form-control" id="last_name" name="last_name"
-                                value="{{ $data->last_name }}" />
+                                value="{{ $data->lName }}" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="email">Email</label>
@@ -29,10 +29,10 @@
                         <div class="mb-3">
                             <label class="form-label" for="role">Role</label>
                             <select class="form-select" id="role" name="role">
-                                <option value="Admin" {{ $data->role == 'Admin' ? 'selected' : '' }}>Admin
+                                <option value="Admin" {{ $data->userType == 'Admin' ? 'selected' : '' }}>Admin
                                 </option>
                                 <option value="Medical Specialist"
-                                    {{ $data->role == 'Medical Specialist' ? 'selected' : '' }}>Medical Specialist
+                                    {{ $data->userType == 'Medical Specialist' ? 'selected' : '' }}>Medical Specialist
                                 </option>
                             </select>
                         </div>

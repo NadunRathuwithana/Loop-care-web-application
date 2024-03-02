@@ -27,9 +27,9 @@
                                             <p class="text-secondary">Patient Registration</p>
                                         </div>
 
-                                        <form action="{{ url('registerQuestion') }}" method="post"
+                                        <form action="{{ url('patientRegister') }}" method="post"
                                             enctype="multipart/form-data">
-                                            {{ csrf_field() }}
+                                            @csrf
                                             <div class="row d-flex justify-content-center align-items-top"
                                                 style="height: 400px;">
                                                 <div class="col-12">

@@ -27,46 +27,59 @@
                             <table class="table" id="table">
                                 <thead>
                                     <tr>
+                                        <th>ID</th>
                                         <th>Question</th>
                                         <th>Answers</th>
                                         <th>Effective Role</th>
-                                        <th>Status</th>
+                                        <th class="text-center">Status</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
-                                    {{-- <tr>
-                                        <td>
-                                            <strong>What is your pain?</strong>
-                                        </td>
-                                        <td>
-                                            Back Pain,
-                                            Neck Pain,
-                                            Knee Pain,
-                                            Elbow Pain,
-                                            Other Pain
-                                        </td>
-                                        <td>
-                                            Patient
-                                        </td>
-                                        <td><span class="badge bg-label-primary me-1">Active</span></td>
-                                        <td>
-                                            <div class="dropdown z-50">
-                                                <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
-                                                    data-bs-toggle="dropdown">
-                                                    <i class="bx bx-dots-vertical-rounded"></i>
-                                                </button>
-                                                <div class="dropdown-menu">
-                                                    <a class="dropdown-item" href="javascript:void(0)" data-bs-toggle="modal" data-bs-target="#edit-modal"><i
-                                                            class="bx bx-edit-alt me-1"></i> Edit</a>
-                                                    <a class="dropdown-item" href="edit_user"><i
-                                                            class='bx bx-info-circle'></i> Deactivate</a>
-                                                    <a class="dropdown-item text-danger" href="javascript:void(0);"><i
-                                                            class="bx bx-trash me-1"></i> Delete</a>
+                                    @foreach ($allQuestions as $data)
+                                        <tr>
+                                            <td>{{ $data->id }}</td>
+                                            <td>
+                                                <strong>{{ $data->questionName }}</strong>
+                                            </td>
+                                            <td>
+                                                @foreach ($data->answers_name as $item)
+                                                    {{ $item->answer }} ,
+                                                @endforeach
+                                            </td>
+                                            <td>
+                                                {{ $data->userType }}
+                                            </td>
+                                            <td class="text-center">
+                                                <span
+                                                    class="badge {{ $data->isActive ? 'bg-label-primary' : 'bg-label-danger' }} me-1">
+                                                    {{ $data->isActive ? 'Active' : 'Deactivated' }}
+                                                </span>
+                                            </td>
+                                            <td>
+                                                <div class="dropdown z-50">
+                                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                        data-bs-toggle="dropdown">
+                                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                                    </button>
+                                                    <div class="dropdown-menu">
+                                                        <a class="dropdown-item" data-bs-toggle="modal"
+                                                            data-bs-target="#edit-modal_{{ $data->id }}"><i
+                                                                class="bx bx-edit-alt me-2"></i>Edit</a>
+                                                        <a class="dropdown-item"
+                                                            href="{{ url('/status_question' . $data->id) }}"><i
+                                                                class='bx bx-info-circle me-2'></i>{{ $data->isActive ? 'Deactivated' : 'Activate' }}</a>
+                                                        <a class="dropdown-item text-danger"
+                                                            href="{{ url('/delete_question' . $data->id) }}"><i
+                                                                class="bx bx-trash me-2"></i>
+                                                            Delete</a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </td>
-                                    </tr> --}}
+                                            </td>
+                                        </tr>
+
+                                        @include('admin.signup_management.patials.edit-modal')
+                                    @endforeach
                                 </tbody>
                             </table>
                         </div>
@@ -77,54 +90,4 @@
     </div>
 
     @include('admin.signup_management.patials.create-modal')
-    @include('admin.signup_management.patials.edit-modal')
 @endsection
-@section('scripts')
-    <script>
-         $(function() {
-        var table = $('#table').DataTable({
-            processing: true,
-            serverSide: true,
-            destroy: true,
-            ajax: "{{ route('questions-setup.get-questions') }}",
-            order: [ 1, 'asc' ],
-            columns: [
-                {
-                    data: 'question',
-                    name: 'question'
-                },
-                {
-                    data: 'answers',
-                    name: 'answers'
-                },
-                {
-                    data: 'action',
-                    name: 'action'
-                },
-            ]
-        });
-
-        });
-
-        //delete farm
-        function submitDeleteForm(form) {
-        new Swal({
-                title: "Are you sure?",
-                text: "to delete this vessel list?",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonClass: "btn-danger",
-                confirmButtonText: "Yes Delete",
-                cancelButtonText: "Cancel",
-                closeOnConfirm: false,
-            })
-            .then((result) => {
-                if (result.isConfirmed) {
-                    form.submit();
-                }
-            })
-        return false;
-        }
-    </script>
-@endsection
-

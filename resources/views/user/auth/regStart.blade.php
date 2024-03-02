@@ -10,7 +10,7 @@
                 <img class="logo-reg-screen" src="assets/img/navWhite.png" alt="">
                 <h1 class="text-white text-start mt-3">Empowering your journey</br>towards wellness.</h1>
                 <div class="mt-3">
-                    <a href="{{ url('register') }}" class="btn btn-white-outline py-3 w-100 mt-3 me-2 fw-bold">
+                    <a href="{{ url('register_patient') }}" class="btn btn-white-outline py-3 w-100 mt-3 me-2 fw-bold">
                         <h5 class="m-0 text-white">
                             I'm a Patient
                         </h5>

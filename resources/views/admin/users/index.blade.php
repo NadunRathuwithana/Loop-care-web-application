@@ -41,18 +41,18 @@
                                         <tr>
                                             <td>{{ $data->id }}</td>
                                             <td>
-                                                <strong>{{ $data->first_name }} {{ $data->last_name }}</strong>
+                                                <strong>{{ $data->fName }} {{ $data->lName }}</strong>
                                             </td>
                                             <td>
                                                 {{ $data->email }}
                                             </td>
                                             <td>
-                                                {{ $data->role }}
+                                                {{ $data->userType }}
                                             </td>
                                             <td class="text-center">
                                                 <span
-                                                    class="badge {{ $data->is_active ? 'bg-label-primary' : 'bg-label-danger' }} me-1">
-                                                    {{ $data->is_active ? 'Active' : 'Deactivated' }}
+                                                    class="badge {{ $data->isActive ? 'bg-label-primary' : 'bg-label-danger' }} me-1">
+                                                    {{ $data->isActive ? 'Active' : 'Deactivated' }}
                                                 </span>
                                             </td>
 
@@ -68,7 +68,7 @@
                                                                 class="bx bx-edit-alt me-2"></i>Edit</a>
                                                         <a class="dropdown-item"
                                                             href="{{ url('/status_admin_users' . $data->id) }}"><i
-                                                                class='bx bx-info-circle me-2'></i>{{ $data->is_active ? 'Deactivated' : 'Activate' }}</a>
+                                                                class='bx bx-info-circle me-2'></i>{{ $data->isActive ? 'Deactivated' : 'Activate' }}</a>
                                                         <a class="dropdown-item text-danger"
                                                             href="{{ url('/delete_admin_users' . $data->id) }}"><i
                                                                 class="bx bx-trash me-2"></i>

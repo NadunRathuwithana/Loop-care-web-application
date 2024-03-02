@@ -29,9 +29,9 @@
                         </div>
                         <div class="flex-grow-1">
                           <!-- user name -->
-                          <span class="fw-semibold d-block">John Doe</span>
+                          <span class="fw-semibold d-block">{{ \Illuminate\Support\Facades\Auth::user()->fName }}</span>
                           <!-- user role -->
-                          <small class="text-muted">Admin</small>
+                          <small class="text-muted">{{ \Illuminate\Support\Facades\Auth::user()->userType }}</small>
                         </div>
                       </div>
                     </a>
@@ -50,11 +50,15 @@
                     <div class="dropdown-divider"></div>
                   </li>
                   <li>
+
                     <!-- logout -->
-                    <a class="dropdown-item" href="auth-login-basic.html">
-                      <i class="bx bx-power-off me-2"></i>
-                      <span class="align-middle">Log Out</span>
-                    </a>
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button class="dropdown-item" type="submit" >
+                            <i class="menu-icon tf-icons bx bx-log-out me-2"></i>
+                            <span class="align-middle">Log Out</span>
+                        </button>
+                    </form>
                   </li>
                 </ul>
               </li>

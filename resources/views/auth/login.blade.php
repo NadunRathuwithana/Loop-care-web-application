@@ -75,36 +75,23 @@
                                                 @enderror
                                             </div>
 
-                                            <div class="row mb-3">
-                                                <div class="col-md-6 offset-md-4">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" name="remember"
-                                                            id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                                        <label class="form-check-label" for="remember">
-                                                            {{ __('Remember Me') }}
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
 
                                             <div class="mb-4">
-                                                <button class="btn btn-main btn-block w-100 py-2" type="submit">
+                                                <button class="btn btn-main btn-block w-100 py-2 mb-3" type="submit">
                                                     {{ __('Login') }}</button>
 
                                                 @if (Route::has('password.request'))
-                                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                                    <a class="small text-muted" href="{{ route('password.request') }}">
                                                         {{ __('Forgot Your Password?') }}
                                                     </a>
                                                 @endif
                                             </div>
-
-                                            <a class="small text-muted" href="#!">Forgot password?</a>
-
                                         </form>
-                                        <p class="pt-5 mb-5 pb-lg-2">Don't have an account?
-                                            <a href="{{ url('regStart') }}" class="reglink">Register here</a>
-                                        </p>
+                                        <div class="d-flex justify-content-center">
+                                            <p class="pt-5 mb-5 pb-lg-2">Don't have an account?
+                                                <a href="{{ url('regStart') }}" class="reglink">Register here</a>
+                                            </p>
+                                        </div>
 
                                     </div>
                                 </div>
