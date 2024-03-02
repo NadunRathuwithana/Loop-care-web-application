@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\DB;
 use App\Helpers\APIResponseMessage;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-use Yajra\DataTables\Facades\DataTables;
 use App\Http\Requests\QuetionSetupRequest;
 
 class QuetionSetupController extends Controller
@@ -94,5 +93,5 @@ class QuetionSetupController extends Controller
             return redirect()->back()->withErrors(['Failed to change status']);
         }
     }
-    
+
 }

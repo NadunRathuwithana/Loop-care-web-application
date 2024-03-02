@@ -21,7 +21,7 @@
                             <label class="form-label">Category</label>
                             <select class="form-select" aria-label="Default select example" id="category"
                                 name="category" required>
-                                <option value="Normal" selected>Walking</option>
+                                <option value="Walking" selected>Walking</option>
                                 <option value="Runing">Runing</option>
                                 <option value="Jumping">Jumping</option>
                             </select>
@@ -174,7 +174,7 @@
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
                                 Close
                             </button>
-                            <button type="submit" class="btn btn-primary">Add Meal</button>
+                            <button type="submit" class="btn btn-primary">Add Goal</button>
                         </div>
                     </div>
 

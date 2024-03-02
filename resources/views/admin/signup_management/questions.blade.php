@@ -23,16 +23,16 @@
 
                     <div class="card">
                         <h5 class="card-header">Questions and Answers</h5>
-                        <div class="table-responsive text-nowrap overflow-visible">
-                            <table class="table" id="table">
+                        <div class="table-responsive overflow-visible">
+                            <table class="table">
                                 <thead>
                                     <tr>
                                         <th>ID</th>
                                         <th>Question</th>
                                         <th>Answers</th>
-                                        <th>Effective Role</th>
+                                        <th>Role</th>
                                         <th class="text-center">Status</th>
-                                        <th>Actions</th>
+                                        <th class="text-center">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody class="table-border-bottom-0">
@@ -58,7 +58,7 @@
                                             </td>
                                             <td>
                                                 <div class="dropdown z-50">
-                                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow"
+                                                    <button type="button" class="btn p-0 dropdown-toggle hide-arrow text-center w-100"
                                                         data-bs-toggle="dropdown">
                                                         <i class="bx bx-dots-vertical-rounded"></i>
                                                     </button>
